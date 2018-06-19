@@ -5,6 +5,7 @@ import java.util.ArrayList
 import java.io.File
 import java.lang.management.ManagementFactory
 import org.apache.commons.math3.stat.inference.TestUtils
+import java.util.stream.IntStream
 import kotlin.math.ln
 
 fun starttimer(): Long {
@@ -59,10 +60,10 @@ fun pullCSV(path: String) : ArrayList<HashSet<Protein>> {
                                 linevalue[5].toDouble(), // MolW
                                 linevalue[2].toInt(), // SpC
                                 0.00,0.00) // Dummy values for SAFs and logNSAFs
-                                proteins.add(protein)
-                                intertotalspc += linevalue[2].toInt()
-                                intertotalmolw += linevalue[5].toDouble()
-                                }
+                        proteins.add(protein)
+                        intertotalspc += linevalue[2].toInt()
+                        intertotalmolw += linevalue[5].toDouble()
+                    }
                     line = fileReader.readLine() // Pushes the reader down one line
                 }
 
@@ -84,17 +85,17 @@ fun pullCSV(path: String) : ArrayList<HashSet<Protein>> {
                 e.printStackTrace()
             }
         }
-        }
-        catch(e: Exception) {
-            println("No Files in Folder, you goose")
-            e.printStackTrace()
-                            }
+    }
+    catch(e: Exception) {
+        println("No Files in Folder, you goose")
+        e.printStackTrace()
+    }
 
     return state
 }
 
 fun intersection(data: List<HashSet<Protein>>) =
-        data.reduce { acc, it -> acc.apply { retainAll(it) } } // Tese intersection functions produce a list of Uniqe IDs from all 6 replicates
+        data.reduce { acc, it -> acc.apply { retainAll(it) } } // These intersection functions produce a list of Unique IDs from all 6 replicates
 fun intersection(data: List<HashSet<Protein>>, combination: List<Int>) =
         intersection(combination.map { data[it - 1] })
 
@@ -145,7 +146,7 @@ fun dottest(control: HashMap<UniqueProtein, UniqueProtein>, treatment: HashMap<U
                 protein.state2spc,
                 protein.state1lognsaf,
                 protein.state2lognsaf
-                ))
+        ))
     }
     return ttestarray
 }
@@ -172,11 +173,23 @@ fun printOutput(ttdata: ArrayList<ArrayList<TTestResult>>, fdr: Double) {
     val outputList = ArrayList<String>()
 
     for (id in kerberusSet.keys) {
-        if (kerberusSet.getValue(id) > ((100-fdr)/100) * 400)
+        if (kerberusSet.getValue(id) > ((fdr)/100) * 400)
             outputList.add(id)
     }
     println(outputList)
     println(outputList.size)
+}
+
+fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>) {
+    println("Making the 400 .csv files")
+
+    IntStream.range(0, ttdata.size).forEach{
+        File("src/output/$it.csv").printWriter().use { out ->
+            ttdata[it].forEach {
+                out.println("${it.id}, ${it.ttestlognsafval}")
+            }
+        }
+    }
 }
 
 fun main(args: Array<String>){
@@ -200,8 +213,9 @@ fun main(args: Array<String>){
             ttestgroups.add(dottest(reproducibleControl, reproducibleTreatment))
         }
     }
-
+    //Printing the output
     printOutput(ttestgroups, kerberusFDR)
+    makeOutput(ttestgroups)
     endtimer(perftime)
 }
 
