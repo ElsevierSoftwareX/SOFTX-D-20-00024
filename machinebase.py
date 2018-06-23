@@ -2,6 +2,7 @@ from functools import reduce
 import pandas as pd
 import glob
 import numpy as np
+import seaborn as sea
 import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 
@@ -32,7 +33,7 @@ def importCSV(kfilepath, tfilepath):
     return outerjoinln, outerjoinsp, test
 
 
-def isolationForest(kerberusln, kerberussp, testdata):
+def individualIsolationForests(kerberusln, kerberussp, testdata):
 
     count = 0
     predictiontest = []
@@ -40,7 +41,7 @@ def isolationForest(kerberusln, kerberussp, testdata):
 
     # This section here will produce 400 separate forests, 1 for every ttest combo,
     # indexed to a protein ID
-    """
+
     for index, row in testdata.iterrows():  # index = ID and row = all 400 values
         count += 1
 
@@ -85,14 +86,20 @@ def isolationForest(kerberusln, kerberussp, testdata):
         plt.yticks([])
         plt.xticks(np.arange(0, 1, step=0.05))
         plt.close("all")
-        """
+
+
+def megaIsolationForest(kerberusln, kerberussp, testdata):
+
+    count = 0
+    predictiontest = []
+    forest = IsolationForest(max_samples='auto', contamination=0.2)
 
     # This section computes a mega-forest.
     totaldf = pd.concat([pd.Series(kerberusln.values.ravel()), pd.Series(kerberussp.values.ravel())], axis=1)
     totaldf.columns = ["lnNSAF", "SpC"]
     totaldf.drop(totaldf[(totaldf.lnNSAF == 1) | (totaldf.SpC == 1) |
                          (totaldf.lnNSAF == 0) | (totaldf.SpC == 0) |
-                         (totaldf.SpC.dtype == np.str)].index, inplace=True)
+                         (totaldf.lnNSAF.dtype == np.str) | (totaldf.SpC.dtype == np.str)].index, inplace=True)
     totaldf.reset_index(drop=True, inplace=True)
 
     testdf = testdata
@@ -104,7 +111,6 @@ def isolationForest(kerberusln, kerberussp, testdata):
     print("Now constructing the mega forest")
     forest.fit(totaldf)
     predictiontest.append(forest.predict(testdf))
-    print(predictiontest)
 
     plt.clf()
     plt.title("Isolation Forest")
@@ -112,9 +118,12 @@ def isolationForest(kerberusln, kerberussp, testdata):
     z = forest.decision_function(np.c_[xx.ravel(), yy.ravel()])
     z = z.reshape(xx.shape)
     plt.contourf(xx, yy, z, cmap=plt.cm.Greens_r)
+    colours = ['yellow' if test == 1 else 'red' for test in predictiontest[0]]
     b1 = plt.scatter(totaldf["lnNSAF"], totaldf["SpC"], c='black', s=.1)
-    b2 = plt.scatter(testdf["lnNSAF"], testdf["SpC"], c='yellow', s=30, edgecolor='k')
+    b2 = plt.scatter(testdf["lnNSAF"], testdf["SpC"], c=colours, s=30, edgecolor='k')
     plt.legend([b1, b2], ["Training", "Test"], loc="upper left")
+    plt.plot((0.05, 0.05), (0, 1), c='blue')  # (x1 x2), (y1 y2)
+    plt.plot((0, 1), (0.05, 0.05), c='blue')
     plt.xlabel("TTest from lnNSAF")
     plt.ylabel("TTest from SpC")
     plt.yticks(np.arange(0, 1, step=0.05))
@@ -126,4 +135,4 @@ def isolationForest(kerberusln, kerberussp, testdata):
 if __name__ == '__main__':
 
     Kerberusdataln, Kerberusdatasp, Testdata = importCSV("src/output/400/", "src/output/6by6/result.csv")
-    isolationForest(Kerberusdataln, Kerberusdatasp, Testdata)
+    megaIsolationForest(Kerberusdataln, Kerberusdatasp, Testdata)
