@@ -7,6 +7,7 @@ import java.lang.management.ManagementFactory
 import org.apache.commons.math3.stat.inference.TestUtils
 import java.util.stream.IntStream
 import kotlin.math.ln
+import org.apache.commons.collections4.ListUtils
 
 fun starttimer(): Long {
     val threadMX = ManagementFactory.getThreadMXBean()
@@ -180,14 +181,27 @@ fun printOutput(ttdata: ArrayList<ArrayList<TTestResult>>, fdr: Double) {
     println(outputList.size)
 }
 
-fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>) {
+fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<Int>>) {
     println("Making the 400 .csv files")
 
     IntStream.range(0, ttdata.size).forEach{
-        File("src/output/$it.csv").printWriter().use { out ->
+        File("src/output/400/$it.csv").printWriter().use { out ->
             ttdata[it].forEach {
-                out.println("${it.id}, ${it.ttestlognsafval}")
+                out.println("${it.id}, ${it.ttestlognsafval}, ${it.ttestspcval}")
             }
+        }
+    }
+
+    val fourhundredlist = ArrayList<List<Int>>()
+    for (x in 1..perms.size) {
+        for (y in 1..perms.size) {
+            fourhundredlist.add(ListUtils.union(perms[x-1], perms[y-1]))
+        }
+
+    }
+    File("src/output/perms/perms.csv").printWriter().use { out ->
+        for(x in fourhundredlist) {
+            out.println(x.toString().replace('[', ' ').replace(']', ' '))
         }
     }
 }
@@ -195,7 +209,7 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>) {
 fun main(args: Array<String>){
 
     //Setting up the timer, permutations and control code
-    val permutations = permutations.perm()
+    val permutations = permutationmaker.perm()
     val perftime = starttimer()
     println("Input the Kerberus FDR:")
     val kerberusFDR = readLine()!!.toDouble()
@@ -215,7 +229,7 @@ fun main(args: Array<String>){
     }
     //Printing the output
     printOutput(ttestgroups, kerberusFDR)
-    makeOutput(ttestgroups)
+    makeOutput(ttestgroups, permutations)
     endtimer(perftime)
 }
 

@@ -1,4 +1,4 @@
-package permutations
+package permutationmaker
 
 fun perm() : ArrayList<List<Int>> {
         val l1 = listOf(1, 2, 3, 4)

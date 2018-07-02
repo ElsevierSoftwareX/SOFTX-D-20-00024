@@ -95,19 +95,22 @@ def individualIsolationForests(kerberusln, kerberussp, testdata):
             foresttrain.to_csv(str("src/output/error/" + str(count) + "-Train.csv"), sep=',')
             continue
 
+        plt.clf()
+        index = index.replace("|", "-")
+        plt.title(index + " Isolation Forest")
         xx, yy = np.meshgrid(np.linspace(0, 1, 50), np.linspace(0, 1, 50))
         z = forest.decision_function(np.c_[xx.ravel(), yy.ravel()])
         z = z.reshape(xx.shape)
-
-        plt.contourf(xx, yy, z, cmap=plt.cm.Reds_r)
-        plt.title("Isolation Forest")
-        b1 = plt.scatter(foresttrain["lnNSAF"], foresttrain["SpC"], c='white', s=20, edgecolor='k')
-        b2 = plt.scatter(test["lnNSAF"], test["SpC"], c='green', s=20, edgecolor='k')
+        plt.contourf(xx, yy, z, cmap=plt.cm.Greens_r)
+        b1 = plt.scatter(foresttrain["lnNSAF"], foresttrain["SpC"], c='black', s=1, edgecolor='k')
+        b2 = plt.scatter(test["lnNSAF"], test["SpC"], c='yellow', s=20)
         plt.legend([b1, b2], ["training observations", "new observations"], loc="upper right")
         plt.xlabel("TTest from lnNSAF")
         plt.ylabel("TTest from SpC")
-        plt.yticks([])
-        plt.xticks(np.arange(0, 1, step=0.05))
+        plt.yticks(np.arange(0, 1, step=0.05))
+        plt.xticks(np.arange(0, 1, step=0.05), rotation=75)
+        plt.tight_layout()
+        plt.savefig('src/output/Indie-Isolation/' + index + '.jpg')
         plt.close("all")
 
 
@@ -144,6 +147,7 @@ def megaIsolationForest(totaldf, testdf):
 if __name__ == '__main__':
 
     Kerberusdataln, Kerberusdatasp, Testdata = importCSV("src/output/400/", "src/output/6by6/result.csv")
+    individualIsolationForests(Kerberusdataln, Kerberusdatasp, Testdata)
     TotalDF, TestDF = constructDataFrames(Kerberusdataln, Kerberusdatasp, Testdata)
     megaIsolationForest(TotalDF, TestDF)
 
