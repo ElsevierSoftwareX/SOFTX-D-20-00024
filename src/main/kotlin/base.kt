@@ -195,11 +195,11 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
     val fourhundredlist = ArrayList<List<Int>>()
     for (x in 1..perms.size) {
         for (y in 1..perms.size) {
-            fourhundredlist.add(ListUtils.union(perms[x-1], perms[y-1]))
+            fourhundredlist.add(ListUtils.union(perms[x-1], perms[y-1].map {it + 6}))
         }
 
     }
-    File("src/output/perms/perms.csv").printWriter().use { out ->
+    File("src/output/permcategories/permcategories.csv").printWriter().use { out ->
         for(x in fourhundredlist) {
             out.println(x.toString().replace('[', ' ').replace(']', ' '))
         }
