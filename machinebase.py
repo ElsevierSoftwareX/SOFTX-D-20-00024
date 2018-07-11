@@ -2,15 +2,13 @@ from functools import reduce
 import pandas as pd
 import glob
 import numpy as np
-import seaborn as sea
 import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import ExtraTreesClassifier
 
 
-def cleanData(identity, columns):
-
-    imports = [pd.read_csv(file, delimiter=',', header=None, names=['ID', 'ttest'], usecols=columns, quotechar='"')
-               for file in identity]
+def cleanData(imports):
 
     outerjoin = reduce(lambda a, b: pd.merge(a, b, on='ID', how='outer'), imports)
     outerjoin.set_index('ID', drop=True, inplace=True)
@@ -22,45 +20,37 @@ def cleanData(identity, columns):
     return outerjoin
 
 
-def importCSV(kfilepath, tfilepath):
+def importCSV(kfilepath, tfilepath, catfilepath):
 
     print("Importing CSV files...")
 
     ids = glob.glob(kfilepath + "*.csv")
-    outerjoinln = cleanData(ids, [0, 1])
-    outerjoinsp = cleanData(ids, [0, 2])
+    outerjoinln = cleanData([pd.read_csv(file, delimiter=',', header=None, names=['ID', 'ttest'], usecols=[0,1],
+                                         quotechar='"') for file in ids])
+    outerjoinsp = cleanData([pd.read_csv(file, delimiter=',', header=None, names=['ID', 'ttest'], usecols=[0,2],
+                                         quotechar='"') for file in ids])
 
     test = pd.read_csv(tfilepath, delimiter=',', header=None, names=['ID', 'lnnsaf', 'spc'], quotechar='"')
     test.set_index('ID', drop=True, inplace=True)
 
-    return outerjoinln, outerjoinsp, test
+    label = pd.read_csv(catfilepath, delimiter=',', header=None)
+
+    return outerjoinln, outerjoinsp, test, label
 
 
-def constructDataFrames(kerberusln, kerberussp, testdata):
+def individualForests(kerberusln, kerberussp, testdata, type):
 
-    print("Making the Train and Test Dataframes...")
-
-    totaldf = pd.concat([pd.Series(kerberusln.values.ravel()), pd.Series(kerberussp.values.ravel())], axis=1)
-    totaldf.columns = ["lnNSAF", "SpC"]
-    totaldf.drop(totaldf[(totaldf.lnNSAF == 1) | (totaldf.SpC == 1) |
-                         (totaldf.lnNSAF == 0) | (totaldf.SpC == 0) |
-                         (totaldf.lnNSAF.dtype == np.str) | (totaldf.SpC.dtype == np.str)].index, inplace=True)
-    totaldf.reset_index(drop=True, inplace=True)
-
-    testdf = testdata
-    testdf.columns = ["lnNSAF", "SpC"]
-    testdf.drop(testdf[(testdf.lnNSAF == 1) | (testdf.SpC == 1) |
-                       (testdf.lnNSAF == 0) | (testdf.SpC == 0)].index, inplace=True)
-    testdf.reset_index(drop=True, inplace=True)
-
-    return totaldf, testdf
-
-
-def individualIsolationForests(kerberusln, kerberussp, testdata):
+    print("Producing " + type + " forests")
 
     count = 0
     predictiontest = []
-    forest = IsolationForest(max_samples='auto', contamination=0.2)
+    if type == "Isolation":
+        forest = IsolationForest(max_samples='auto', contamination=0.2)
+        foldername = 'src/output/isolationforest/'
+    elif type == "RandomClassifier":
+        forest = RandomForestClassifier(n_estimators=100)
+        foldername = 'src/output/randomclassifierforest/'
+        categories = pd.read_csv('src/output/permcategories/permcategories.csv', delimiter=',', header=None)
 
     # This section here will produce 400 separate forests, 1 for every ttest combo,
     # indexed to a protein ID
@@ -87,8 +77,12 @@ def individualIsolationForests(kerberusln, kerberussp, testdata):
 
         try:
             print("Tree " + str(count) + " of " + str(len(testdata.index)) + " completed.", end="\r", flush=True)
-            forest.fit(foresttrain)
-            predictiontest.append(forest.predict(test))  # This tells us whether the test is an outlier/in
+            if type == "Isolation":
+                forest.fit(foresttrain)
+                predictiontest.append(forest.predict(test))  # This tells us whether the test is an outlier/in
+            elif type == "RandomClassifier":
+                forest.fit(foresttrain, foresttrain)
+                predictiontest.append(forest.predict(test))
         except ValueError:
             print("Warning: Incompatible Test @: " + str(count))
             test.to_csv(str("src/output/error/" + str(count) + "-Test.csv"), sep=',')
@@ -97,7 +91,7 @@ def individualIsolationForests(kerberusln, kerberussp, testdata):
 
         plt.clf()
         index = index.replace("|", "-")
-        plt.title(index + " Isolation Forest")
+        plt.title(index + " " + type + " Isolation Forest")
         xx, yy = np.meshgrid(np.linspace(0, 1, 50), np.linspace(0, 1, 50))
         z = forest.decision_function(np.c_[xx.ravel(), yy.ravel()])
         z = z.reshape(xx.shape)
@@ -110,8 +104,28 @@ def individualIsolationForests(kerberusln, kerberussp, testdata):
         plt.yticks(np.arange(0, 1, step=0.05))
         plt.xticks(np.arange(0, 1, step=0.05), rotation=75)
         plt.tight_layout()
-        plt.savefig('src/output/Indie-Isolation/' + index + '.jpg')
+        plt.savefig(foldername + index + '.jpg')
         plt.close("all")
+
+
+def constructDataFrames(kerberusln, kerberussp, testdata):
+
+    print("Making the Train and Test Dataframes for the Mega Forest...")
+
+    totaldf = pd.concat([pd.Series(kerberusln.values.ravel()), pd.Series(kerberussp.values.ravel())], axis=1)
+    totaldf.columns = ["lnNSAF", "SpC"]
+    totaldf.drop(totaldf[(totaldf.lnNSAF == 1) | (totaldf.SpC == 1) |
+                         (totaldf.lnNSAF == 0) | (totaldf.SpC == 0) |
+                         (totaldf.lnNSAF.dtype == np.str) | (totaldf.SpC.dtype == np.str)].index, inplace=True)
+    totaldf.reset_index(drop=True, inplace=True)
+
+    testdf = testdata
+    testdf.columns = ["lnNSAF", "SpC"]
+    testdf.drop(testdf[(testdf.lnNSAF == 1) | (testdf.SpC == 1) |
+                       (testdf.lnNSAF == 0) | (testdf.SpC == 0)].index, inplace=True)
+    testdf.reset_index(drop=True, inplace=True)
+
+    return totaldf, testdf
 
 
 def megaIsolationForest(totaldf, testdf):
@@ -144,10 +158,59 @@ def megaIsolationForest(totaldf, testdf):
     plt.close("all")
 
 
+def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
+
+    forestcollection = []
+
+    for foresttype in [ExtraTreesClassifier(testdata.shape[0], n_jobs=-1),
+                       RandomForestClassifier(testdata.shape[0], n_jobs=-1)]:
+
+        print("Classifier Forests...")
+        forestarray = np.empty(12)
+
+        for count, (index, row) in enumerate(testdata.iterrows()):  # index = ID and row = all 400 values
+
+            if index not in kerberusln.index.values:
+                print("Test not in 400Data...? Why?")
+                continue
+
+            foresttrain = pd.concat([kerberusln.loc[index], kerberussp.loc[index]], axis=1)
+            for i in range(0, 12):
+                foresttrain["Label " + str(i + 1)] = labels.iloc[:, i].astype(str).values
+            foresttrain.columns = ["lnNSAF", "SpC", *list("Label " + str(i) for i in range(1, 13))]
+            foresttrain.fillna(1, inplace=True)
+            foresttrain.replace(' NaN', 1, inplace=True)
+            foresttrain.drop(foresttrain[(foresttrain.lnNSAF == 1) | (foresttrain.SpC == 1) |
+                                         (foresttrain.lnNSAF == 0) | (foresttrain.SpC == 0)].index, inplace=True)
+
+            test = pd.DataFrame(testdata.loc[index].values.reshape(1, -1))
+            test.columns = ["lnNSAF", "SpC"]
+            test.fillna(1, inplace=True)
+            test.replace(' NaN', 1, inplace=True)
+            test.drop(test[(test.lnNSAF == 1) | (test.SpC == 1) | (test.lnNSAF == 0) | (test.SpC == 0)].index, inplace=True)
+
+            forest = foresttype
+            try:
+                forest.fit(foresttrain.loc[:, "lnNSAF":"SpC"], foresttrain.loc[:, "Label 1":"Label 12"])
+                forestarray = forestarray + np.array(forest.predict(test))
+                print(str(count + 1) + " of " + str(testdata.shape[0]) + " completed")
+            except ValueError:
+                print("Warning: Incompatible Test @: " + str(count))
+                continue
+
+        forestcollection.append(forestarray)
+
+    print(forestcollection)
+    input()
+
+
 if __name__ == '__main__':
 
-    Kerberusdataln, Kerberusdatasp, Testdata = importCSV("src/output/400/", "src/output/6by6/result.csv")
-    individualIsolationForests(Kerberusdataln, Kerberusdatasp, Testdata)
+    Kerberusdataln, Kerberusdatasp, Testdata, Labels = importCSV("src/output/400/", "src/output/6by6/result.csv",
+                                                                 "src/output/permcategories/permtotal.csv")
+    mLabelRandomForestClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels)
+    individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "RandomClassifier")
+    individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "Isolation")
     TotalDF, TestDF = constructDataFrames(Kerberusdataln, Kerberusdatasp, Testdata)
     megaIsolationForest(TotalDF, TestDF)
 
