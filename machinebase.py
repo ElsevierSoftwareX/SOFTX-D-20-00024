@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 
 
 def cleanData(imports):
@@ -161,12 +163,17 @@ def megaIsolationForest(totaldf, testdf):
 def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
 
     forestcollection = []
+    types = ["KNeighbors", "Extra Trees", "Random Forest", "Decision Tree"]
+    widths = [0.8, 0.65, 0.5, 0.35]
 
-    for foresttype in [ExtraTreesClassifier(testdata.shape[0], n_jobs=-1),
-                       RandomForestClassifier(testdata.shape[0], n_jobs=-1)]:
+    for count, foresttype in enumerate([
+        KNeighborsClassifier(n_jobs=-1),
+        ExtraTreesClassifier(testdata.shape[0], n_jobs=-1),
+        RandomForestClassifier(testdata.shape[0], n_jobs=-1),
+        DecisionTreeClassifier()]):
 
-        print("Classifier Forests...")
-        forestarray = np.empty(12)
+        print("Currently Conducting: " + types[count])
+        forestarray = np.zeros(12)
 
         for count, (index, row) in enumerate(testdata.iterrows()):  # index = ID and row = all 400 values
 
@@ -192,16 +199,29 @@ def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
             forest = foresttype
             try:
                 forest.fit(foresttrain.loc[:, "lnNSAF":"SpC"], foresttrain.loc[:, "Label 1":"Label 12"])
-                forestarray = forestarray + np.array(forest.predict(test))
+                prediction = pd.DataFrame(forest.predict(test)).apply(lambda x: int(x)) # KNeighbours and Decision Trees
+                #  output a string list, so this piece of code here standardises the different tests
+                forestarray = forestarray + np.array(prediction)
                 print(str(count + 1) + " of " + str(testdata.shape[0]) + " completed")
             except ValueError:
-                print("Warning: Incompatible Test @: " + str(count))
+                print("Warning: Incompatible Test @: " + str(count + 1))
                 continue
 
-        forestcollection.append(forestarray)
+        forestcollection.append(list(map(lambda x: x / int(testdata.shape[0]), forestarray)))
 
     print(forestcollection)
-    input()
+    plt.clf()
+
+    for i, test in enumerate(forestcollection):
+        plt.bar(np.arange(len(test)), test, widths[i], alpha=0.9)
+        plt.xticks(np.arange(len(test)),
+                   ['R{}'.format(i + 1) for i in range(len(test))])
+        axes = plt.gca()
+        axes.set_ylim([0, 1])
+    plt.legend(types)
+    plt.plot(np.arange(12), np.average(np.asarray(forestcollection), axis=0))
+    plt.plot([0, 11], [.5, .5], '--', c='black', linewidth=2)
+    plt.show()
 
 
 if __name__ == '__main__':
