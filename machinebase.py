@@ -165,6 +165,34 @@ def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
     forestcollection = []
     types = ["KNeighbors", "Extra Trees", "Random Forest", "Decision Tree"]
     widths = [0.8, 0.65, 0.5, 0.35]
+    colours = ['#0a3052', '#161fc0', '#486bea', '#7fbbf0']
+
+    # This is a second round of data cleaning
+    traindatalist = []
+    testdatalist = []
+    for index, row in testdata.iterrows():  # index = ID and row = all 400 values
+
+        if index not in kerberusln.index.values:
+            print("Test not in 400Data...? Why?")
+            continue
+
+        foresttrain = pd.concat([kerberusln.loc[index], kerberussp.loc[index]], axis=1)
+        for i in range(0, 12):
+            foresttrain["Label " + str(i + 1)] = labels.iloc[:, i].astype(str).values
+        foresttrain.columns = ["lnNSAF", "SpC", *list("Label " + str(i) for i in range(1, 13))]
+        foresttrain.fillna(1, inplace=True)
+        foresttrain.replace(' NaN', 1, inplace=True)
+        foresttrain.drop(foresttrain[(foresttrain.lnNSAF == 1) | (foresttrain.SpC == 1) |
+                                     (foresttrain.lnNSAF == 0) | (foresttrain.SpC == 0)].index, inplace=True)
+
+        test = pd.DataFrame(testdata.loc[index].values.reshape(1, -1))
+        test.columns = ["lnNSAF", "SpC"]
+        test.fillna(1, inplace=True)
+        test.replace(' NaN', 1, inplace=True)
+        test.drop(test[(test.lnNSAF == 1) | (test.SpC == 1) | (test.lnNSAF == 0) | (test.SpC == 0)].index, inplace=True)
+
+        traindatalist.append(foresttrain)
+        testdatalist.append(test)
 
     for count, foresttype in enumerate([
         KNeighborsClassifier(n_jobs=-1),
@@ -175,36 +203,19 @@ def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
         print("Currently Conducting: " + types[count])
         forestarray = np.zeros(12)
 
-        for count, (index, row) in enumerate(testdata.iterrows()):  # index = ID and row = all 400 values
-
-            if index not in kerberusln.index.values:
-                print("Test not in 400Data...? Why?")
-                continue
-
-            foresttrain = pd.concat([kerberusln.loc[index], kerberussp.loc[index]], axis=1)
-            for i in range(0, 12):
-                foresttrain["Label " + str(i + 1)] = labels.iloc[:, i].astype(str).values
-            foresttrain.columns = ["lnNSAF", "SpC", *list("Label " + str(i) for i in range(1, 13))]
-            foresttrain.fillna(1, inplace=True)
-            foresttrain.replace(' NaN', 1, inplace=True)
-            foresttrain.drop(foresttrain[(foresttrain.lnNSAF == 1) | (foresttrain.SpC == 1) |
-                                         (foresttrain.lnNSAF == 0) | (foresttrain.SpC == 0)].index, inplace=True)
-
-            test = pd.DataFrame(testdata.loc[index].values.reshape(1, -1))
-            test.columns = ["lnNSAF", "SpC"]
-            test.fillna(1, inplace=True)
-            test.replace(' NaN', 1, inplace=True)
-            test.drop(test[(test.lnNSAF == 1) | (test.SpC == 1) | (test.lnNSAF == 0) | (test.SpC == 0)].index, inplace=True)
+        # This is where the forest is constructed and executed
+        for chunk, _ in enumerate(testdatalist):
 
             forest = foresttype
             try:
-                forest.fit(foresttrain.loc[:, "lnNSAF":"SpC"], foresttrain.loc[:, "Label 1":"Label 12"])
-                prediction = pd.DataFrame(forest.predict(test)).apply(lambda x: int(x)) # KNeighbours and Decision Trees
+                forest.fit(traindatalist[chunk].loc[:, "lnNSAF":"SpC"], traindatalist[chunk].loc[:, "Label 1":"Label 12"])
+                prediction = pd.DataFrame(forest.predict(testdatalist[chunk])).apply(lambda x: int(x))
+                #  KNeighbours and Decision Trees
                 #  output a string list, so this piece of code here standardises the different tests
                 forestarray = forestarray + np.array(prediction)
-                print(str(count + 1) + " of " + str(testdata.shape[0]) + " completed")
+                print(str(chunk + 1) + " of " + str(testdata.shape[0]) + " completed")
             except ValueError:
-                print("Warning: Incompatible Test @: " + str(count + 1))
+                print("Warning: Incompatible Test @: " + str(chunk + 1))
                 continue
 
         forestcollection.append(list(map(lambda x: x / int(testdata.shape[0]), forestarray)))
@@ -213,14 +224,14 @@ def mLabelRandomForestClassifier(kerberusln, kerberussp, testdata, labels):
     plt.clf()
 
     for i, test in enumerate(forestcollection):
-        plt.bar(np.arange(len(test)), test, widths[i], alpha=0.9)
+        plt.bar(np.arange(len(test)), test, widths[i], alpha=0.75, color=colours[i])
         plt.xticks(np.arange(len(test)),
                    ['R{}'.format(i + 1) for i in range(len(test))])
         axes = plt.gca()
         axes.set_ylim([0, 1])
     plt.legend(types)
-    plt.plot(np.arange(12), np.average(np.asarray(forestcollection), axis=0))
-    plt.plot([0, 11], [.5, .5], '--', c='black', linewidth=2)
+    plt.plot(np.arange(12), np.average(np.asarray(forestcollection), axis=0), c='black', linewidth=2)
+    plt.plot([0, 11], [.5, .5], '--', c='red', linewidth=1)
     plt.show()
 
 
