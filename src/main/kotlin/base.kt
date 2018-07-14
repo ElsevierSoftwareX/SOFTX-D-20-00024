@@ -102,6 +102,8 @@ fun intersection(data: List<HashSet<Protein>>, combination: List<Int>) =
 
 fun spcSum(uniquedata: HashSet<Protein>, inputdata: ArrayList<HashSet<Protein>>, permutations: List<Int>): HashMap<UniqueProtein, UniqueProtein> {
 
+    val permsize = permutations.size
+
     val datastore = ArrayList<HashMap<Protein, Protein>>()
     for (i in permutations) {
         val data = HashMap<Protein, Protein>()
@@ -114,7 +116,7 @@ fun spcSum(uniquedata: HashSet<Protein>, inputdata: ArrayList<HashSet<Protein>>,
     val newuniqueprotein = HashMap<UniqueProtein, UniqueProtein>()
     for (p in uniquedata) {
         var sumspc = 0
-        val a = UniqueProtein(p.id, 3, DoubleArray(3), DoubleArray(3), DoubleArray(3)) // Initialises Values
+        val a = UniqueProtein(p.id, permsize, DoubleArray(permsize), DoubleArray(permsize), DoubleArray(permsize)) // Initialises Values
         for ((index, entry) in datastore.withIndex()) {
             a.r[index] = entry.getValue(p).spc.toDouble()
             a.SAF[index] = entry.getValue(p).SAF
@@ -124,6 +126,17 @@ fun spcSum(uniquedata: HashSet<Protein>, inputdata: ArrayList<HashSet<Protein>>,
         newuniqueprotein.put(a,a)
     }
     return newuniqueprotein
+}
+
+fun dofullsixttest(control: HashMap<UniqueProtein, UniqueProtein>, treatment: HashMap<UniqueProtein, UniqueProtein>) {
+
+    val ttestarray = dottest(control, treatment)
+
+    File("src/output/6by6/result.csv").printWriter().use { out ->
+            ttestarray.forEach {
+                out.println("${it.id}, ${it.ttestlognsafval}, ${it.ttestspcval}")
+            }
+        }
 }
 
 fun dottest(control: HashMap<UniqueProtein, UniqueProtein>, treatment: HashMap<UniqueProtein, UniqueProtein>): ArrayList<TTestResult> {
@@ -182,6 +195,7 @@ fun printOutput(ttdata: ArrayList<ArrayList<TTestResult>>, fdr: Double) {
 }
 
 fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<Int>>) {
+
     println("Making the 400 .csv files")
 
     IntStream.range(0, ttdata.size).forEach{
@@ -199,9 +213,41 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
         }
 
     }
-    File("src/output/permcategories/permcategories.csv").printWriter().use { out ->
+
+    File("src/output/permcategories/permnumbers.csv").printWriter().use { out ->
         for(x in fourhundredlist) {
             out.println(x.toString().replace('[', ' ').replace(']', ' '))
+        }
+    }
+
+    val permMap = mapOf("1" to "One", "2" to "Two", "3" to "Three", "4" to "Four", "5" to "Five",
+            "6" to "Six", "7" to "Seven", "8" to "Eight", "9" to "Nine", "10" to "Ten", "11" to "Eleven",
+            "12" to "Twelve", "[" to "", "]" to "")
+
+    File("src/output/permcategories/permcategories.csv").printWriter().use { out ->
+        for(x in fourhundredlist) {
+            var line = x.map { it.toString() }
+            var newline = StringBuilder()
+            line.forEach { newline.append(permMap.get(it)).append(",") }
+            out.println(newline)
+        }
+    }
+
+    File("src/output/permcategories/permtotal.csv").printWriter().use { out ->
+        for(x in fourhundredlist) {
+            var line = x.map { it.toString() }
+            var newline = StringBuilder()
+            var newlist:MutableList<String> = ArrayList()
+            IntStream.range(1, 13).forEach {
+                if(line.contains(it.toString())) {
+                    newlist.add("1")
+                }
+                else {
+                    newlist.add("0")
+                }
+            }
+            IntStream.range(0, 12).forEach {newline.append(newlist[it]).append(",")}
+            out.println(newline)
         }
     }
 }
@@ -218,6 +264,10 @@ fun main(args: Array<String>){
     val treatmentpath = "src/input/treatment/"
     val controlIDList = pullCSV(controlpath)
     val treatmentIDList = pullCSV(treatmentpath)
+    val basicList = listOf(1,2,3,4,5,6)
+    //Performing the 6 by 6 full TTest
+    dofullsixttest(spcSum(intersection(controlIDList, basicList), controlIDList, basicList),
+            spcSum(intersection(treatmentIDList, basicList), treatmentIDList, basicList))
     //Performing the 6 by 6 plex TTest array
     val ttestgroups = ArrayList<ArrayList<TTestResult>>()
     for (i in 1..permutations.size) {
