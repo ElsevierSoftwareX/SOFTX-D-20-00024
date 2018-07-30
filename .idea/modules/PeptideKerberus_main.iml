@@ -23,5 +23,8 @@
         </compilerArguments>
       </configuration>
     </facet>
+    <facet type="TornadoFX" name="TornadoFX">
+      <configuration />
+    </facet>
   </component>
 </module>

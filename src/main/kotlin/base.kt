@@ -39,7 +39,33 @@ data class TTestResult(var id: String, var ttestspcval: Double, var ttestlognsaf
     override fun hashCode() = id.hashCode()
     override fun equals(other: Any?) = other?.let { id == (it as TTestResult).id } ?: false}
 
-fun pullCSV(path: String) : ArrayList<HashSet<Protein>> {
+fun engineLoop(): String {
+    while (1 != 2) {
+        var engine = readLine()!!
+        if (engine == "GPM" || engine == "PD" || engine == "MM") {
+            return engine
+        } else {
+            println("Invalid input, try again")
+        }
+    }
+}
+
+fun declareLine(eng: String, line: String): List<String> {
+
+    if (eng == "GPM") {
+        return line.split(",")
+    }
+
+    if (eng == "PD") {
+        return line.split(",(?=(?:[^\\\"]*\\\"[^\\\"]*\\\")*[^\\\"]*\$)".toRegex()) // Yes, really.
+    }
+
+    else { // For MetaMorpheus and those horrible pipes
+        return line.split(",(?=(?:[^\\\"]*\\\"[^\\\"]*\\\")*[^\\\"]*\$)".toRegex())
+        }
+}
+
+fun pullCSV(path: String, eng: String) : ArrayList<HashSet<Protein>> {
     val state = ArrayList<HashSet<Protein>>()
     val totalmolw = ArrayList<Double>()
     val totalspc = ArrayList<Int>()
@@ -54,16 +80,59 @@ fun pullCSV(path: String) : ArrayList<HashSet<Protein>> {
                 fileReader.readLine() // Reads and skips the header
                 var line = fileReader.readLine()
                 while (line != null) {
-                    val linevalue: List<String> = line.split(",")
+                    val linevalue = declareLine(eng, line)
                     if (linevalue.isNotEmpty()) {
-                        val protein = Protein(linevalue[0], // ID
-                                linevalue[3].toDouble(), // Score
-                                linevalue[5].toDouble(), // MolW
-                                linevalue[2].toInt(), // SpC
-                                0.00,0.00) // Dummy values for SAFs and logNSAFs
-                        proteins.add(protein)
-                        intertotalspc += linevalue[2].toInt()
-                        intertotalmolw += linevalue[5].toDouble()
+                        if (eng == "GPM") {
+                            val protein = Protein(linevalue[0], // ID
+                                    linevalue[3].toDouble(), // Score
+                                    linevalue[5].toDouble(), // MolW
+                                    linevalue[2].toInt(), // SpC
+                                    0.00, 0.00) // Dummy values for SAFs and logNSAFs
+                            proteins.add(protein)
+                            intertotalspc += linevalue[2].toInt()
+                            intertotalmolw += linevalue[5].toDouble()
+                        }
+                        if (eng == "PD") {
+                            val protein = Protein(linevalue[0], // ID
+                                    linevalue[2].toDouble(), // Score
+                                    linevalue[7].toDouble(), // MolW
+                                    linevalue[4].toInt(), // SpC
+                                    0.00, 0.00) // Dummy values for SAFs and logNSAFs
+                            proteins.add(protein)
+                            intertotalspc += linevalue[4].toInt()
+                            intertotalmolw += linevalue[7].toDouble()
+                        }
+                        if (eng == "MM") {
+                            var breaker = 0
+                            linevalue.forEach {
+                                if (it.contains("NaN"))
+                                        {
+                                            breaker = 1
+                                        }
+                            }
+                            if (breaker != 1) {
+                                if (linevalue[4].contains('|')) {
+                                    val specialweight = linevalue[4].split('|').map { it.toDouble() }.average()
+                                    val protein = Protein(linevalue[0], // ID
+                                            linevalue[27].toDouble(), // Score
+                                            specialweight, // MolW
+                                            linevalue[8].toInt(), // SpC
+                                            0.00, 0.00) // Dummy values for SAFs and logNSAFs
+                                    proteins.add(protein)
+                                    intertotalspc += linevalue[8].toInt()
+                                    intertotalmolw += specialweight
+                                } else {
+                                    val protein = Protein(linevalue[0], // ID
+                                            linevalue[27].toDouble(), // Score
+                                            linevalue[4].toDouble(), // MolW
+                                            linevalue[8].toInt(), // SpC
+                                            0.00, 0.00) // Dummy values for SAFs and logNSAFs
+                                    proteins.add(protein)
+                                    intertotalspc += linevalue[8].toInt()
+                                    intertotalmolw += linevalue[4].toDouble()
+                                }
+                            }
+                        }
                     }
                     line = fileReader.readLine() // Pushes the reader down one line
                 }
@@ -252,18 +321,23 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
     }
 }
 
+fun runMachineBase() {
+    Runtime.getRuntime().exec("python machinebase.py")
+}
+
 fun main(args: Array<String>){
 
     //Setting up the timer, permutations and control code
     val permutations = permutationmaker.perm()
     val perftime = starttimer()
-    println("Input the Kerberus FDR:")
-    val kerberusFDR = readLine()!!.toDouble()
+    val kerberusFDR = .5
+    println("Input the Search Engine: PD or GPM or MM")
+    val engine = engineLoop()
     //Setting up csv inputs
     val controlpath = "src/input/control/"
     val treatmentpath = "src/input/treatment/"
-    val controlIDList = pullCSV(controlpath)
-    val treatmentIDList = pullCSV(treatmentpath)
+    val controlIDList = pullCSV(controlpath, engine)
+    val treatmentIDList = pullCSV(treatmentpath, engine)
     val basicList = listOf(1,2,3,4,5,6)
     //Performing the 6 by 6 full TTest
     dofullsixttest(spcSum(intersection(controlIDList, basicList), controlIDList, basicList),
@@ -281,6 +355,8 @@ fun main(args: Array<String>){
     printOutput(ttestgroups, kerberusFDR)
     makeOutput(ttestgroups, permutations)
     endtimer(perftime)
+    // Passing command over to python
+    //runMachineBase()
 }
 
 /*Graveyard code:*/
