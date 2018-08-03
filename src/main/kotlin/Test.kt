@@ -1,14 +1,54 @@
+import javafx.beans.property.SimpleBooleanProperty
+import javafx.beans.property.SimpleStringProperty
+import javafx.concurrent.ScheduledService
+import javafx.concurrent.Task
 import javafx.geometry.Pos
 import javafx.scene.control.SelectionMode
 import javafx.scene.control.TextField
 import javafx.scene.control.ToggleGroup
 import javafx.scene.text.FontPosture
 import javafx.stage.Stage
+import javafx.util.Duration
 import tornadofx.*
 import java.io.File
 
 
+data class DataResult(val data : SimpleStringProperty)
+
+class PollController : Controller() {
+
+    val currentData = SimpleStringProperty()
+    val stopped = SimpleBooleanProperty(true)
+
+    val scheduledService = object : ScheduledService<DataResult>() {
+        init {
+            period = Duration.seconds(1.0)
+        }
+        override fun createTask() : Task<DataResult> = FetchDataTask()
+    }
+
+    fun start() {
+        scheduledService.restart()
+        stopped.value = false
+    }
+
+    inner class FetchDataTask : Task<DataResult>() {
+
+        override fun call() : DataResult {
+            return DataResult(SimpleStringProperty(File("src/interface/test.txt").readText()))
+        }
+
+        override fun succeeded() {
+            this@PollController.currentData.value = value.data.value // Here is the value of the test file
+        }
+
+    }
+
+}
+
 class MyView : View() {
+
+    val controller: PollController by inject()
 
     private lateinit var controlfiles: File
     private lateinit var treatmentfiles: File
@@ -22,14 +62,21 @@ class MyView : View() {
 
     override val root = borderpane {
 
-        top = vbox(20, Pos.CENTER) {
-            label("PeptideKerberus") {
-                style {
-                    fontSize = 24.px
+        top = vbox(5, Pos.BOTTOM_CENTER) {
+            button("Start") {
+                disableProperty().bind( controller.stopped.not() )
+                setOnAction {
+                    controller.start()
                 }
             }
-        label("")
-        }
+            label().bind(controller.currentData)
+            label("PeptideKerberus") {
+                    style {
+                        fontSize = 24.px
+                    }
+                }
+            label("")
+            }
 
         left = vbox {
             setPrefSize(20.0, 500.0)
@@ -46,49 +93,64 @@ class MyView : View() {
 
                 label("Select Your Protein ID Files") {
                     style {
-                        fontSize = 18.px
+                        fontSize = 16.px
                     }
                 }
 
                 label("")
 
-                vbox(20, Pos.CENTER) {
-                    button {
-                        action {
-                            try {
-                                controlfiles = chooseDirectory("Select Target Directory")!!
-                                controls.setFilePathName(controlfiles.path)
-                            } catch (e: KotlinNullPointerException) {
-                                controls.setFilePathName("No Folder Selected!")
-                            }
-                        }
-                        label("Select Output Folder", center)
-                    }
-                    hbox(20, Pos.CENTER) {
+                hbox(20, Pos.CENTER) {
+
+                    vbox(20, Pos.CENTER) {
+                        label("")
                         imageview("/folder25px.png")
+                    }
+
+                    vbox(20, Pos.CENTER) {
+
+                        button {
+                            action {
+                                try {
+                                    controlfiles = chooseDirectory("Select Target Directory")!!
+                                    controls.setFilePathName(controlfiles.path)
+                                } catch (e: KotlinNullPointerException) {
+                                    controls.setFilePathName("No Folder Selected!")
+                                }
+                            }
+                            label("Select Output Folder", center)
+                        }
                         textfield().bind(controls.filePathProperty())
                     }
-                    label("")
                 }
 
-                vbox(20, Pos.CENTER) {
-                    button {
-                        action {
-                            try {
-                                treatmentfiles = chooseDirectory("Select Target Directory")!!
-                                treatments.setFilePathName(treatmentfiles.path)
-                            } catch (e: KotlinNullPointerException) {
-                                controls.setFilePathName("No Folder Selected!")
-                            }
-                        }
-                        label("Select Treatment Folder", center)
-                    }
-                    hbox(20, Pos.CENTER) {
+                label("")
+
+                hbox(20, Pos.CENTER) {
+
+                    vbox(20, Pos.CENTER) {
+                        label("")
                         imageview("/folder25px.png")
+                    }
+
+                    vbox(20, Pos.CENTER) {
+
+                        button {
+                            action {
+                                try {
+                                    treatmentfiles = chooseDirectory("Select Target Directory")!!
+                                    treatments.setFilePathName(treatmentfiles.path)
+                                } catch (e: KotlinNullPointerException) {
+                                    treatments.setFilePathName("No Folder Selected!")
+                                }
+                            }
+                            label("Select Treatment Folder", center)
+                        }
                         textfield().bind(treatments.filePathProperty())
                     }
-                    label("")
                 }
+
+                label("")
+                label("")
 
                 vbox(20, Pos.CENTER) {
                     label {
@@ -205,7 +267,6 @@ class MyView : View() {
                 }
             }
 
-
             // 3rd Column
 
             vbox(20, Pos.TOP_CENTER) {
@@ -260,22 +321,29 @@ class MyView : View() {
                     }
                 }
 
-                vbox(20, Pos.CENTER) {
-                    button {
-                        action {
-                            try {
-                                outputdirec = chooseDirectory("Select Target Directory")!!
-                                output.setFilePathName(outputdirec.path)
-                            } catch (e: KotlinNullPointerException) {
-                                output.setFilePathName("No Folder Selected!")
-                            }
-                        }
-                        label("Select Control Folder", center)
-                    }
-                    hbox(20, Pos.CENTER) {
+                hbox(20, Pos.CENTER) {
+
+                    vbox(20, Pos.CENTER) {
+                        label("")
                         imageview("/folder25px.png")
+                    }
+
+                    vbox(20, Pos.CENTER) {
+
+                        button {
+                            action {
+                                try {
+                                    outputdirec = chooseDirectory("Select Target Directory")!!
+                                    output.setFilePathName(outputdirec.path)
+                                } catch (e: KotlinNullPointerException) {
+                                    output.setFilePathName("No Folder Selected!")
+                                }
+                            }
+                            label("Select Output Folder", center)
+                        }
                         textfield().bind(output.filePathProperty())
                     }
+                    label("")
                 }
 
                 button("Start") {
@@ -296,7 +364,7 @@ class MyView : View() {
             }
         }
 
-        right = vbox(20) {
+        right = vbox {
             setPrefSize(20.0, 500.0)
         }
 
@@ -311,7 +379,7 @@ class Main : App() {
 
     override fun start(stage: Stage) {
         super.start(stage)
-        stage.width = 1225.0
+        stage.width = 1200.0
         stage.height = 600.0
     }
 }
