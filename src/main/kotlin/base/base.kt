@@ -1,3 +1,5 @@
+package base
+
 import java.util.HashSet
 import java.io.BufferedReader
 import java.io.FileReader
@@ -197,11 +199,11 @@ fun spcSum(uniquedata: HashSet<Protein>, inputdata: ArrayList<HashSet<Protein>>,
     return newuniqueprotein
 }
 
-fun dofullsixttest(control: HashMap<UniqueProtein, UniqueProtein>, treatment: HashMap<UniqueProtein, UniqueProtein>) {
+fun dofullsixttest(control: HashMap<UniqueProtein, UniqueProtein>, treatment: HashMap<UniqueProtein, UniqueProtein>, output: String) {
 
     val ttestarray = dottest(control, treatment)
 
-    File("src/output/6by6/result.csv").printWriter().use { out ->
+    File(output + "/6by6/result.csv").printWriter().use { out ->
             ttestarray.forEach {
                 out.println("${it.id}, ${it.ttestlognsafval}, ${it.ttestspcval}")
             }
@@ -263,12 +265,12 @@ fun printOutput(ttdata: ArrayList<ArrayList<TTestResult>>, fdr: Double) {
     println(outputList.size)
 }
 
-fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<Int>>) {
+fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<Int>>, output: String) {
 
     println("Making the 400 .csv files")
 
     IntStream.range(0, ttdata.size).forEach{
-        File("src/output/400/$it.csv").printWriter().use { out ->
+        File(output + "/400/$it.csv").printWriter().use { out ->
             ttdata[it].forEach {
                 out.println("${it.id}, ${it.ttestlognsafval}, ${it.ttestspcval}")
             }
@@ -283,7 +285,7 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
 
     }
 
-    File("src/output/permcategories/permnumbers.csv").printWriter().use { out ->
+    File(output + "/permcategories/permnumbers.csv").printWriter().use { out ->
         for(x in fourhundredlist) {
             out.println(x.toString().replace('[', ' ').replace(']', ' '))
         }
@@ -293,7 +295,7 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
             "6" to "Six", "7" to "Seven", "8" to "Eight", "9" to "Nine", "10" to "Ten", "11" to "Eleven",
             "12" to "Twelve", "[" to "", "]" to "")
 
-    File("src/output/permcategories/permcategories.csv").printWriter().use { out ->
+    File(output + "/permcategories/permcategories.csv").printWriter().use { out ->
         for(x in fourhundredlist) {
             var line = x.map { it.toString() }
             var newline = StringBuilder()
@@ -302,7 +304,7 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
         }
     }
 
-    File("src/output/permcategories/permtotal.csv").printWriter().use { out ->
+    File(output + "/permcategories/permtotal.csv").printWriter().use { out ->
         for(x in fourhundredlist) {
             var line = x.map { it.toString() }
             var newline = StringBuilder()
@@ -321,27 +323,40 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
     }
 }
 
-fun runMachineBase() {
-    Runtime.getRuntime().exec("python machinebase.py")
+fun runMachineBase(args: List<String>, algorithms: String) {
+    println("Passing control to python")
+    val carrier = "cmd /c python C:\\Users\\David\\IdeaProjects\\PeptideKerberusBucket\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
+    println(carrier)
+    Runtime.getRuntime().exec(carrier)
+    println("?")
 }
 
-fun main(args: Array<String>){
+fun main(args: Array<Any>){
 
     //Setting up the timer, permutations and control code
     val permutations = permutationmaker.perm()
     val perftime = starttimer()
     val kerberusFDR = .5
     println("Input the Search Engine: PD or GPM or MM")
-    val engine = engineLoop()
+    //val engine = engineLoop()
+    val engine = args[3].toString()
+    val machineargs = args[4].toString().replace("]", "").replace("[", "")
+
     //Setting up csv inputs
-    val controlpath = "src/input/control/"
-    val treatmentpath = "src/input/treatment/"
+    val controlpath = args[0].toString() + '\\'
+    val treatmentpath = args[1].toString() + '\\'
+    val outputpath = args[2].toString() + '\\'
+    val directorylist = listOf(outputpath + "6by6\\", outputpath + "400\\",
+            outputpath + "permcategories\\", outputpath + "MultiLabel\\")
+    directorylist.forEach { File(it).mkdirs() }
     val controlIDList = pullCSV(controlpath, engine)
     val treatmentIDList = pullCSV(treatmentpath, engine)
     val basicList = listOf(1,2,3,4,5,6)
+
     //Performing the 6 by 6 full TTest
     dofullsixttest(spcSum(intersection(controlIDList, basicList), controlIDList, basicList),
-            spcSum(intersection(treatmentIDList, basicList), treatmentIDList, basicList))
+            spcSum(intersection(treatmentIDList, basicList), treatmentIDList, basicList), outputpath)
+
     //Performing the 6 by 6 plex TTest array
     val ttestgroups = ArrayList<ArrayList<TTestResult>>()
     for (i in 1..permutations.size) {
@@ -351,13 +366,12 @@ fun main(args: Array<String>){
             ttestgroups.add(dottest(reproducibleControl, reproducibleTreatment))
         }
     }
+
     //Printing the output
     printOutput(ttestgroups, kerberusFDR)
-    makeOutput(ttestgroups, permutations)
+    makeOutput(ttestgroups, permutations, outputpath)
     endtimer(perftime)
-    // Passing command over to python
-    //runMachineBase()
-}
 
-/*Graveyard code:*/
-//IntStream.range(0, ControlIDList.size).forEach {println(ControlIDList[it].sumBy{it.spc})} // This is how you sum all of the spcs for one replicate, and also an alternative way to perform a "for x in a:
+    // Passing command over to python
+    runMachineBase(directorylist, machineargs)
+}

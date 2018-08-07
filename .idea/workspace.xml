@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17d68495-1d58-4635-afb7-94c66524204b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Decision.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Extra.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/K.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Random.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/proteinIDs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machinebase.py" beforeDir="false" afterPath="$PROJECT_DIR$/machinebase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/BaseKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Protein.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/TTestProtein.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/TTestResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/UniqueProtein.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/control/Young-R1.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/control/Young-R2.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/control/Young-R3.csv" beforeDir="false" />
@@ -15,7 +30,9 @@
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R4.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R5.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R6.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/base.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/threads.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,6 +43,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PeptideKerberus$machinebase.coverage" NAME="machinebase Coverage Results" MODIFIED="1533547197282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,12 +69,46 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PeptideKerberus" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -67,34 +121,41 @@
     <session id="-629251434">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="3" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.closed" value="25" />
+          <entry key="project.open.time.10" value="6" />
+          <entry key="project.open.time.11" value="4" />
+          <entry key="project.open.time.12" value="5" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
+          <entry key="css" value="3" />
           <entry key="fxml" value="3" />
           <entry key="gradle" value="4" />
-          <entry key="kt" value="12" />
+          <entry key="java" value="2" />
+          <entry key="kt" value="15" />
           <entry key="png" value="1" />
-          <entry key="py" value="2" />
+          <entry key="proteinIDs" value="2" />
+          <entry key="py" value="3" />
+          <entry key="test" value="4" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
+          <entry key="CSS" value="3" />
           <entry key="Groovy" value="4" />
           <entry key="Image" value="1" />
-          <entry key="Kotlin" value="12" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1" />
+          <entry key="JAVA" value="2" />
+          <entry key="Kotlin" value="15" />
+          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="Python" value="2" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -102,17 +163,23 @@
         <counts>
           <entry key="css" value="421" />
           <entry key="fxml" value="562" />
-          <entry key="gradle" value="43" />
-          <entry key="java" value="41" />
-          <entry key="kt" value="8724" />
+          <entry key="gradle" value="141" />
+          <entry key="java" value="105" />
+          <entry key="kt" value="20890" />
+          <entry key="proteinIDs" value="1" />
+          <entry key="py" value="1453" />
+          <entry key="test" value="23" />
+          <entry key="txt" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="421" />
-          <entry key="Groovy" value="43" />
-          <entry key="JAVA" value="41" />
-          <entry key="Kotlin" value="8724" />
+          <entry key="Groovy" value="141" />
+          <entry key="JAVA" value="105" />
+          <entry key="Kotlin" value="20890" />
+          <entry key="PLAIN_TEXT" value="94" />
+          <entry key="Python" value="1453" />
           <entry key="XML" value="562" />
         </counts>
       </usages-collector>
@@ -123,8 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="67">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -132,10 +199,91 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4343">
-              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            <state relative-caret-position="-8">
+              <caret line="393" column="17" lean-forward="true" selection-start-line="393" selection-start-column="17" selection-end-line="393" selection-end-column="17" />
               <folding>
-                <element signature="e#0#211#0" expanded="true" />
+                <element signature="e#0#533#0" expanded="true" />
+                <element signature="n#!!block;n#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
+              <folding>
+                <element signature="e#14#369#0" expanded="true" />
+                <element signature="n#!!block;n#starttimer#0" />
+                <element signature="n#!!block;n#endtimer#0" />
+                <element signature="n#!!block;n#Protein#0" />
+                <element signature="n#!!block;n#UniqueProtein#0" />
+                <element signature="n#!!block;n#TTestProtein#0" />
+                <element signature="n#!!block;n#TTestResult#0" />
+                <element signature="n#!!block;n#engineLoop#0" />
+                <element signature="e#2134#2343#1" />
+                <element signature="e#2235#2272#1" />
+                <element signature="e#2278#2337#1" />
+                <element signature="n#!!block;n#declareLine#0" />
+                <element signature="e#2429#2467#1" />
+                <element signature="e#2490#2597#1" />
+                <element signature="e#2608#2748#1" />
+                <element signature="n#!!block;n#pullCSV#0" />
+                <element signature="e#2953#7793#0" />
+                <element signature="e#3001#7787#2" />
+                <element signature="e#3019#7662#0" />
+                <element signature="e#3479#6864#1" />
+                <element signature="e#3588#6762#1" />
+                <element signature="e#3632#4205#1" />
+                <element signature="e#4247#4820#1" />
+                <element signature="e#4862#6740#1" />
+                <element signature="e#4954#5181#2" />
+                <element signature="e#5052#5151#1" />
+                <element signature="e#5228#6714#1" />
+                <element signature="e#5294#6032#1" />
+                <element signature="e#6038#6684#1" />
+                <element signature="e#6908#7098#1" />
+                <element signature="e#7237#7324#1" />
+                <element signature="e#7684#7777#0" />
+                <element signature="e#7818#7902#0" />
+                <element signature="n#!!block;n#spcSum#0" />
+                <element signature="e#8521#8676#1" />
+                <element signature="e#8604#8642#1" />
+                <element signature="e#8771#9270#1" />
+                <element signature="e#8987#9197#1" />
+                <element signature="n#!!block;n#dofullsixttest#0" />
+                <element signature="e#9557#9704#2" />
+                <element signature="e#9597#9694#2" />
+                <element signature="n#!!block;n#dottest#0" />
+                <element signature="e#10010#10259#1" />
+                <element signature="e#10339#10701#1" />
+                <element signature="n#!!block;n#printOutput#0" />
+                <element signature="e#10918#11290#1" />
+                <element signature="e#10948#11284#1" />
+                <element signature="e#11000#11274#1" />
+                <element signature="e#11062#11132#1" />
+                <element signature="e#11154#11260#1" />
+                <element signature="e#11367#11463#1" />
+                <element signature="n#!!block;n#makeOutput#0" />
+                <element signature="e#11711#11935#2" />
+                <element signature="e#11782#11929#2" />
+                <element signature="e#11822#11919#2" />
+                <element signature="e#12015#12154#1" />
+                <element signature="e#12050#12147#1" />
+                <element signature="e#12240#12374#2" />
+                <element signature="e#12283#12368#1" />
+                <element signature="e#12394#12631#0" />
+                <element signature="e#12720#12975#2" />
+                <element signature="e#12763#12969#1" />
+                <element signature="e#13059#13627#2" />
+                <element signature="e#13102#13621#1" />
+                <element signature="e#13294#13493#2" />
+                <element signature="e#13345#13401#1" />
+                <element signature="e#13423#13479#1" />
+                <element signature="e#14664#15138#1" />
+                <element signature="e#14868#15132#1" />
               </folding>
             </state>
           </provider>
@@ -144,19 +292,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machinebase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-605">
-              <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/filepath.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="59">
+              <caret line="291" column="90" selection-start-line="291" selection-start-column="90" selection-end-line="291" selection-end-column="90" />
               <folding>
-                <element signature="e#0#69#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#1672#5016#0" />
+                <element signature="e#5083#6228#0" />
+                <element signature="e#6278#7391#0" />
+                <element signature="e#7974#9078#0" />
               </folding>
             </state>
           </provider>
@@ -177,18 +320,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>println</find>
-      <find>[</find>
-      <find>XP_010035773.1</find>
-      <find>XP_018727337.1</find>
-      <find>]</find>
-      <find>bu</find>
-      <find>RdBu</find>
-      <find>XP_010032055.1</find>
-      <find>permutations</find>
-      <find>rforrestarray</find>
-      <find>src/output</find>
-      <find>result</find>
       <find>result.csv</find>
       <find>1370</find>
       <find>1384</find>
@@ -198,6 +329,27 @@
       <find>calculator</find>
       <find>op</find>
       <find>controlfiles</find>
+      <find>control</find>
+      <find>No FOlder</find>
+      <find>bind</find>
+      <find>MyFiles(</find>
+      <find>textfield</find>
+      <find>currentData</find>
+      <find>Tree</find>
+      <find>Start</find>
+      <find>output</find>
+      <find>6by6</find>
+      <find>GPM</find>
+      <find>Select Output</find>
+      <find>engine</find>
+      <find>toggleGroup</find>
+      <find>input</find>
+      <find>400</find>
+      <find>perm</find>
+      <find>in</find>
+      <find>absolute</find>
+      <find>types</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>rforestarray</replace>
@@ -398,9 +550,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6109826604099" />
+        <entry key="$PROJECT_DIR$" value="6110343028376" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2210216432" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1068593529" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3411435536" />
       </map>
@@ -638,9 +790,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_16.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/threading.py" />
         <option value="$PROJECT_DIR$/threads.py" />
-        <option value="$PROJECT_DIR$/machinebase.py" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/base.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/GUI.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/Panel.fxml" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Operator.kt" />
@@ -651,7 +800,19 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/Application.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/MyApp.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Filepath.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/pykotinterface/test" />
+        <option value="$PROJECT_DIR$/src/pykotinterface/test.txt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/base.kt" />
+        <option value="$PROJECT_DIR$/src/interface/proteinIDs" />
+        <option value="$PROJECT_DIR$/src/interface/test.txt" />
+        <option value="$PROJECT_DIR$/src/interface/Random.txt" />
+        <option value="$PROJECT_DIR$/src/interface/Decision.txt" />
+        <option value="$PROJECT_DIR$/src/interface/Extra.txt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Test.kt" />
+        <option value="$PROJECT_DIR$/src/interface/proteinIDs.txt" />
+        <option value="$PROJECT_DIR$/machinebase.py" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/base/base.kt" />
       </list>
     </option>
   </component>
@@ -673,11 +834,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="345" />
-    <option name="y" value="-11" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -687,6 +847,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -694,43 +855,17 @@
               <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
               <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/David/IdeaProjects/PeptideKerberusBucket/src/main/resources/Calculator.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533088224489" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533641658788" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;kotlin" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="kotlin" />
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/PeptideWitchBucket" />
@@ -740,7 +875,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.27941176" />
     <property name="project.structure.side.proportion" value="0.2786624" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -751,6 +886,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\David\IdeaProjects\PeptideKerberusBucket\src\main\kotlin\base" />
       <recent name="C:\Users\David\IdeaProjects\PeptideKerberus\src\main\kotlin" />
       <recent name="C:\Users\David\IdeaProjects\PeptideKerberus\src\main\kotlin\ttest" />
       <recent name="C:\Users\David\IdeaProjects\PeptideKerberus\src\main" />
@@ -768,7 +904,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TornadoFX.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -782,10 +918,33 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="machinebase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PeptideKerberusBucket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machinebase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="Main" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <module name="PeptideKerberus_test" />
@@ -794,6 +953,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -801,6 +961,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TornadoFX.Main" />
+      <item itemvalue="Python.machinebase" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.machinebase" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -875,12 +1044,27 @@
       <workItem from="1532951324696" duration="2639000" />
       <workItem from="1533017142129" duration="4249000" />
       <workItem from="1533037582199" duration="3073000" />
-      <workItem from="1533081549950" duration="6221000" />
+      <workItem from="1533081549950" duration="8716000" />
+      <workItem from="1533104264128" duration="4823000" />
+      <workItem from="1533115949210" duration="3397000" />
+      <workItem from="1533168609235" duration="1058000" />
+      <workItem from="1533181545542" duration="103000" />
+      <workItem from="1533182049714" duration="2330000" />
+      <workItem from="1533184608696" duration="609000" />
+      <workItem from="1533185240089" duration="2427000" />
+      <workItem from="1533203661836" duration="87000" />
+      <workItem from="1533203802160" duration="2645000" />
+      <workItem from="1533255457915" duration="9725000" />
+      <workItem from="1533283232948" duration="4679000" />
+      <workItem from="1533288773460" duration="6546000" />
+      <workItem from="1533296605439" duration="2798000" />
+      <workItem from="1533543106394" duration="7196000" />
+      <workItem from="1533621832188" duration="11413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165981000" />
+    <option name="totallyTimeSpent" value="228312000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -892,10 +1076,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="653" height="687" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49418604" weight="0.2731872" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49418604" weight="0.54898787" />
       <window_info id="Structure" order="1" sideWeight="0.50581396" side_tool="true" weight="0.2" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -903,20 +1086,20 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49554655" visible="true" weight="0.16370107" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892665" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.08007117" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49149796" visible="true" weight="0.05956679" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28291816" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959514" weight="0.20818505" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49959514" weight="0.8121646" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6779964" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5044534" side_tool="true" weight="0.30604982" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24021353" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.508502" side_tool="true" weight="0.39679715" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.7388193" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49959514" weight="0.3291815" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.7366548" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.16548042" />
       <window_info anchor="bottom" id="Scratch Output" order="15" weight="0.084078714" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -926,7 +1109,7 @@
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Gradle" order="8" weight="0.3288364" />
+      <window_info anchor="right" id="Gradle" order="8" weight="0.99662733" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
@@ -934,16 +1117,16 @@
       <window_info anchor="right" id="SciView" order="13" weight="0.2782462" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49754903" visible="true" weight="0.47368422" />
-      <window_info id="Structure" order="1" sideWeight="0.502451" side_tool="true" weight="0.1611336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49418604" visible="true" weight="0.2639676" />
+      <window_info id="Structure" order="1" sideWeight="0.50581396" side_tool="true" weight="0.2" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49635628" visible="true" weight="0.31850535" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.08007117" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49149796" visible="true" weight="0.3024911" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892665" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -952,10 +1135,10 @@
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.6779964" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50364375" side_tool="true" visible="true" weight="0.31850535" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.508502" side_tool="true" weight="0.39679715" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.7388193" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49959514" weight="0.37388194" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.73843414" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.16548042" />
       <window_info anchor="bottom" id="Scratch Output" order="15" weight="0.084078714" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -965,7 +1148,7 @@
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Gradle" order="8" />
+      <window_info anchor="right" id="Gradle" order="8" weight="0.99662733" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
@@ -1112,54 +1295,183 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/AppLaunch.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/Calculator.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/MyApp.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Calculator.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Operator.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/openfolder50px.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/base.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="251">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pykotinterface/test" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/filepath.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="512" selection-start-line="512" selection-end-line="513" />
+          <folding>
+            <element signature="e#21057#21058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="67">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/filepath.kt">
+    <entry file="file://$PROJECT_DIR$/src/interface/Random.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/K.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Extra.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Decision.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/proteinIDs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/machinebase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-605">
-          <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="19" />
+        <state relative-caret-position="59">
+          <caret line="291" column="90" selection-start-line="291" selection-start-column="90" selection-end-line="291" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1672#5016#0" />
+            <element signature="e#5083#6228#0" />
+            <element signature="e#6278#7391#0" />
+            <element signature="e#7974#9078#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
+          <folding>
+            <element signature="e#14#369#0" expanded="true" />
+            <element signature="n#!!block;n#starttimer#0" />
+            <element signature="n#!!block;n#endtimer#0" />
+            <element signature="n#!!block;n#Protein#0" />
+            <element signature="n#!!block;n#UniqueProtein#0" />
+            <element signature="n#!!block;n#TTestProtein#0" />
+            <element signature="n#!!block;n#TTestResult#0" />
+            <element signature="n#!!block;n#engineLoop#0" />
+            <element signature="e#2134#2343#1" />
+            <element signature="e#2235#2272#1" />
+            <element signature="e#2278#2337#1" />
+            <element signature="n#!!block;n#declareLine#0" />
+            <element signature="e#2429#2467#1" />
+            <element signature="e#2490#2597#1" />
+            <element signature="e#2608#2748#1" />
+            <element signature="n#!!block;n#pullCSV#0" />
+            <element signature="e#2953#7793#0" />
+            <element signature="e#3001#7787#2" />
+            <element signature="e#3019#7662#0" />
+            <element signature="e#3479#6864#1" />
+            <element signature="e#3588#6762#1" />
+            <element signature="e#3632#4205#1" />
+            <element signature="e#4247#4820#1" />
+            <element signature="e#4862#6740#1" />
+            <element signature="e#4954#5181#2" />
+            <element signature="e#5052#5151#1" />
+            <element signature="e#5228#6714#1" />
+            <element signature="e#5294#6032#1" />
+            <element signature="e#6038#6684#1" />
+            <element signature="e#6908#7098#1" />
+            <element signature="e#7237#7324#1" />
+            <element signature="e#7684#7777#0" />
+            <element signature="e#7818#7902#0" />
+            <element signature="n#!!block;n#spcSum#0" />
+            <element signature="e#8521#8676#1" />
+            <element signature="e#8604#8642#1" />
+            <element signature="e#8771#9270#1" />
+            <element signature="e#8987#9197#1" />
+            <element signature="n#!!block;n#dofullsixttest#0" />
+            <element signature="e#9557#9704#2" />
+            <element signature="e#9597#9694#2" />
+            <element signature="n#!!block;n#dottest#0" />
+            <element signature="e#10010#10259#1" />
+            <element signature="e#10339#10701#1" />
+            <element signature="n#!!block;n#printOutput#0" />
+            <element signature="e#10918#11290#1" />
+            <element signature="e#10948#11284#1" />
+            <element signature="e#11000#11274#1" />
+            <element signature="e#11062#11132#1" />
+            <element signature="e#11154#11260#1" />
+            <element signature="e#11367#11463#1" />
+            <element signature="n#!!block;n#makeOutput#0" />
+            <element signature="e#11711#11935#2" />
+            <element signature="e#11782#11929#2" />
+            <element signature="e#11822#11919#2" />
+            <element signature="e#12015#12154#1" />
+            <element signature="e#12050#12147#1" />
+            <element signature="e#12240#12374#2" />
+            <element signature="e#12283#12368#1" />
+            <element signature="e#12394#12631#0" />
+            <element signature="e#12720#12975#2" />
+            <element signature="e#12763#12969#1" />
+            <element signature="e#13059#13627#2" />
+            <element signature="e#13102#13621#1" />
+            <element signature="e#13294#13493#2" />
+            <element signature="e#13345#13401#1" />
+            <element signature="e#13423#13479#1" />
+            <element signature="e#14664#15138#1" />
+            <element signature="e#14868#15132#1" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Test.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4343">
-          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        <state relative-caret-position="-8">
+          <caret line="393" column="17" lean-forward="true" selection-start-line="393" selection-start-column="17" selection-end-line="393" selection-end-column="17" />
           <folding>
-            <element signature="e#0#211#0" expanded="true" />
+            <element signature="e#0#533#0" expanded="true" />
+            <element signature="n#!!block;n#Main#0" />
           </folding>
         </state>
       </provider>
@@ -1209,7 +1521,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2786624" />
+                <option value="0.32089552" />
               </list>
             </option>
           </splitter-proportions>

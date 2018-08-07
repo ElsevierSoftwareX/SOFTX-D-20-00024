@@ -10,6 +10,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 import datetime as dt
 import os
+import sys
 
 
 def cleanData(imports):
@@ -171,10 +172,15 @@ def megaIsolationForest(totaldf, testdf):
     plt.close("all")
 
 
-def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels):
+def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels, usertypes, outputfolder):
 
     forestcollection = []
-    types = ["KNeighbors", "Extra Trees", "Random Forest", "Decision Tree"]
+    possibletypes = ["KNeighbors", "Extra Trees", "Random Forest", "Decision Tree"]
+    forestinit = [
+        KNeighborsClassifier(n_jobs=-1),
+        RandomForestClassifier(testdata.shape[0], n_jobs=-1),
+        DecisionTreeClassifier(),
+        ExtraTreesClassifier(testdata.shape[0], n_jobs=-1)]
     widths = [0.8, 0.65, 0.5, 0.35]
     colours = ['#0a3052', '#161fc0', '#486bea', '#7fbbf0']
 
@@ -206,19 +212,34 @@ def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels):
         testdatalist.append(test)
 
     # This is where the forest is constructed and executed
-    for count, foresttype in enumerate([
-        KNeighborsClassifier(n_jobs=-1),
-        #ExtraTreesClassifier(testdata.shape[0], n_jobs=-1),
-        #RandomForestClassifier(testdata.shape[0], n_jobs=-1),
-        DecisionTreeClassifier()]):
+    for count, foresttype in enumerate(forestinit):
 
-        print("Currently Conducting: " + types[count])
-        testsize = testdata.shape[0]
-        testindexes = [i for i in range(len(testdatalist))]
-        totaloutput = np.zeros(12)
-        for i in testindexes:
-            totaloutput = totaloutput + performClassifierProcess(testdatalist[i], traindatalist[i], foresttype, testsize, i)
-        forestcollection.append(list(map(lambda x: x / int(testdata.shape[0]), totaloutput)))
+        if usertypes[count] != 0:
+
+            print("Currently Conducting: " + possibletypes[count])
+
+            file = open('src/interface/proteinIDs.txt', 'w')
+            file.write(str(len(testdatalist)))
+            file.close()
+
+            if possibletypes[count] == "KNeighbors":
+                path = 'src/interface/K.txt'
+            if possibletypes[count] == "Extra Trees":
+                path = 'src/interface/Extra.txt'
+            if possibletypes[count] == "Random Forest":
+                path = 'src/interface/Random.txt'
+            if possibletypes[count] == "Decision Tree":
+                path = 'src/interface/Decision.txt'
+
+            testsize = testdata.shape[0]
+            testindexes = [i for i in range(len(testdatalist))]
+            totaloutput = np.zeros(12)
+            for i in testindexes:
+                totaloutput = totaloutput + performClassifierProcess(testdatalist[i], traindatalist[i], foresttype, testsize, i, path)
+            forestcollection.append(list(map(lambda x: x / int(testdata.shape[0]), totaloutput)))
+
+        else:
+            continue
 
     print(forestcollection)
     plt.clf()
@@ -229,32 +250,45 @@ def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels):
                    ['R{}'.format(i + 1) for i in range(len(test))])
         axes = plt.gca()
         axes.set_ylim([0, 1])
-    plt.legend(types)
+    plt.legend(possibletypes)
     plt.plot(np.arange(12), np.average(np.asarray(forestcollection), axis=0), c='black', linewidth=2)
     plt.plot([0, 11], [.5, .5], '--', c='red', linewidth=1)
-    plt.show()
+    plt.save(outputfolder + "Deviation.png")
 
 
-def performClassifierProcess(testdatalist, traindatalist, foresttype, size, chunk):
+def performClassifierProcess(testdatalist, traindatalist, foresttype, size, testnum, path):
 
-    print("Producing Classifier: " + str(chunk) + " of " + str(size))
+    print("Producing Classifier: " + str(testnum) + " of " + str(size))
+    file = open(path, 'w')
 
     try:
         foresttype.fit(traindatalist.loc[:, "lnNSAF":"SpC"], traindatalist.loc[:, "Label 1":"Label 12"])
         prediction = pd.DataFrame(foresttype.predict(testdatalist)).apply(lambda x: int(x))
+        file.write(str(testnum))
+        file.close()
         return np.array(prediction)
     except ValueError:
-        print("Warning: Incompatible Test @: " + str(chunk + 1))
+        print("Warning: Incompatible Test @: " + str(testnum))
+        file.close()
         return np.zeros((12,), dtype=int)
 
 
 if __name__ == '__main__':
     time = str(dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+    testtypes = []
+    outputdirec400 = sys.argv[2].replace(',', '')  # 400 Output folder
+    outputdirec6 = sys.argv[1].replace(',', '')  # 6by6 Output folder
+    outputdirecperm = sys.argv[3].replace(',', '')  # PerCat Output folder
+    outputdirmultilabel = sys.argv[4].replace(',', '')  # Folder for Multi Label Output
+    for i in sys.argv[5:11]:
+        testtypes.append(int(i.replace(',', '')))  # What tests to perform
 
-    Kerberusdataln, Kerberusdatasp, Testdata, Labels = importCSV("src/output/400/", "src/output/6by6/result.csv",
-                                                                 "src/output/permcategories/permtotal.csv")
-    #multiLabelMultiClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels)
-    individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "Isolation", time)
+    Kerberusdataln, Kerberusdatasp, Testdata, Labels = \
+        importCSV(outputdirec400, str(outputdirec6 + "/result.csv"), str(outputdirecperm +"/permtotal.csv"))
+
+    #individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "Isolation", time)
+    if sum(testtypes[0:4]) > 0:
+        multiLabelMultiClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels, testtypes[0:4], outputdirmultilabel)
     #individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "RandomClassifier", time)
     #TotalDF, TestDF = constructDataFrames(Kerberusdataln, Kerberusdatasp, Testdata)
     #megaIsolationForest(TotalDF, TestDF)

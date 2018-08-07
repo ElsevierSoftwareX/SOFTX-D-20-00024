@@ -6,11 +6,14 @@ import javafx.geometry.Pos
 import javafx.scene.control.SelectionMode
 import javafx.scene.control.TextField
 import javafx.scene.control.ToggleGroup
+import javafx.scene.input.Clipboard
+import javafx.scene.input.KeyCode
 import javafx.scene.text.FontPosture
 import javafx.stage.Stage
 import javafx.util.Duration
 import tornadofx.*
 import java.io.File
+import base.*
 
 
 data class DataResult(val data : SimpleStringProperty)
@@ -35,7 +38,7 @@ class PollController : Controller() {
     inner class FetchDataTask : Task<DataResult>() {
 
         override fun call() : DataResult {
-            return DataResult(SimpleStringProperty(File("src/interface/test.txt").readText()))
+            return DataResult(SimpleStringProperty(File("src/interface/proteinIDs.txt").readText()))
         }
 
         override fun succeeded() {
@@ -57,6 +60,8 @@ class MyView : View() {
     var treatments = MyFiles()
     var output = MyFiles()
     private val toggleGroup = ToggleGroup()
+    var toggleoutput = "MM"
+    var selectoutput = mutableListOf(1, 1, 1, 1, 1, 1)
     private var proteinIdList = mutableListOf<String>().observable()
     private var pID: TextField by singleAssign()
 
@@ -117,7 +122,7 @@ class MyView : View() {
                                     controls.setFilePathName("No Folder Selected!")
                                 }
                             }
-                            label("Select Output Folder", center)
+                            label("Select Control Folder", center)
                         }
                         textfield().bind(controls.filePathProperty())
                     }
@@ -162,10 +167,22 @@ class MyView : View() {
                 }
                 vbox(20, Pos.CENTER_LEFT) {
                     label("")
-                    radiobutton("GPM", toggleGroup)
-                    radiobutton("Proteome Discoverer", toggleGroup)
-                    radiobutton("Meta Morpheus", toggleGroup)
-                }
+                    radiobutton("GPM", toggleGroup){
+                        if (isSelected) {
+                            toggleoutput = this.text
+                            }
+                        }
+                        radiobutton("Proteome Discoverer", toggleGroup) {
+                            if (isSelected) {
+                                toggleoutput = this.text
+                            }
+                        }
+                        radiobutton("Meta Morpheus", toggleGroup, value="MM") {
+                            if (isSelected) {
+                                toggleoutput = this.text
+                            }
+                        }
+                    }
             }
 
             //2nd Colummn
@@ -198,7 +215,7 @@ class MyView : View() {
                             }
                             textProperty().bind(kToggle)
                             action {
-                                println(kToggle.value)
+                                if (selectoutput[0] == 1) {selectoutput[0] = 0} else {selectoutput[0] = 1}
                             }
                         }
                         togglebutton {
@@ -207,7 +224,7 @@ class MyView : View() {
                             }
                             textProperty().bind(rToggle)
                             action {
-                                println(rToggle.value)
+                                if (selectoutput[1] == 1) {selectoutput[1] = 0} else {selectoutput[1] = 1}
                             }
                         }
                         togglebutton {
@@ -216,7 +233,7 @@ class MyView : View() {
                             }
                             textProperty().bind(dToggle)
                             action {
-                                println(dToggle.value)
+                                if (selectoutput[2] == 1) {selectoutput[2] = 0} else {selectoutput[2] = 1}
                             }
                         }
                         togglebutton {
@@ -225,7 +242,7 @@ class MyView : View() {
                             }
                             textProperty().bind(eToggle)
                             action {
-                                println(eToggle.value)
+                                if (selectoutput[3] == 1) {selectoutput[3] = 0} else {selectoutput[3] = 1}
                             }
                         }
                     }
@@ -251,7 +268,7 @@ class MyView : View() {
                             }
                             textProperty().bind(ifToggle)
                             action {
-                                println(ifToggle.value)
+                                if (selectoutput[4] == 1) {selectoutput[4] = 0} else {selectoutput[4] = 1}
                             }
                         }
                         togglebutton {
@@ -260,7 +277,7 @@ class MyView : View() {
                             }
                             textProperty().bind(mfToggle)
                             action {
-                                println(mfToggle.value)
+                                if (selectoutput[5] == 1) {selectoutput[5] = 0} else {selectoutput[5] = 1}
                             }
                         }
                     }
@@ -284,7 +301,16 @@ class MyView : View() {
                 }
                 vbox(20, Pos.CENTER_LEFT) {
                     hbox(20, Pos.CENTER_LEFT) {
-                        pID = textfield()
+                        pID = textfield() {
+                            setOnKeyReleased { event ->
+                                    if (event.getCode() == KeyCode.ENTER) {
+                                        if (pID.text != "") {
+                                            proteinIdList.add(pID.text)
+                                            pID.text = ""
+                                        }
+                                    } // Allows us to hit enter and input the text into the fieldview
+                                }
+                            }
                         button("Add") {
                             action {
                                 if (pID.text != "") {
@@ -300,7 +326,15 @@ class MyView : View() {
                         }
                     }
                     listview(proteinIdList) {
-                        selectionModel.selectionMode = SelectionMode.MULTIPLE
+                        setOnKeyReleased { event ->
+                                if (event.getCode() == KeyCode.V && event.isControlDown()) {
+                                    val clipboard = Clipboard.getSystemClipboard()
+                                    if (clipboard.hasString()) {
+                                        clipboard.string.split(System.lineSeparator()).forEach { proteinIdList.add(it) }
+                                    }
+                                } // Allows us to paste clipboard into the box
+                            }
+                            selectionModel.selectionMode = SelectionMode.MULTIPLE
                     }
                 }
             }
@@ -348,8 +382,14 @@ class MyView : View() {
 
                 button("Start") {
                     action {
-                        println(controls.getFilePathName())
-                        println(treatments.getFilePathName())
+                        val actions = arrayOf(controls.getFilePathName(),
+                                treatments.getFilePathName(),
+                                outputdirec.path,
+                                toggleoutput,
+                                selectoutput
+                                )
+                        actions.forEach { println(it) }
+                        base.main(actions)
                     }
                 }
                 scrollpane {
