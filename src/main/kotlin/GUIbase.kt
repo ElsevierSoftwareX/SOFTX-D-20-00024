@@ -14,18 +14,29 @@ import javafx.util.Duration
 import tornadofx.*
 import java.io.File
 import base.*
+import javafx.beans.property.SimpleDoubleProperty
+import javafx.scene.image.Image
+import kotlin.concurrent.thread
 
+data class DataResult(val data : SimpleDoubleProperty)
 
-data class DataResult(val data : SimpleStringProperty)
+class PollContext(path: String) : ViewModel() {
+    val pathProperty = SimpleStringProperty(path)
+    var path by pathProperty
+
+    val currentDataProperty = SimpleDoubleProperty()
+    var currentData by currentDataProperty
+}
 
 class PollController : Controller() {
 
-    val currentData = SimpleStringProperty()
+    val context : PollContext by inject()
+
     val stopped = SimpleBooleanProperty(true)
 
     val scheduledService = object : ScheduledService<DataResult>() {
         init {
-            period = Duration.seconds(1.0)
+            period = Duration.seconds(0.01)
         }
         override fun createTask() : Task<DataResult> = FetchDataTask()
     }
@@ -38,20 +49,22 @@ class PollController : Controller() {
     inner class FetchDataTask : Task<DataResult>() {
 
         override fun call() : DataResult {
-            return DataResult(SimpleStringProperty(File("src/interface/proteinIDs.txt").readText()))
+            return DataResult(SimpleDoubleProperty(File(context.path).readText().toDouble()))
         }
 
         override fun succeeded() {
-            this@PollController.currentData.value = value.data.value // Here is the value of the test file
+            this@PollController.context.currentData = value.data.value // Here is the value of the test file
         }
-
     }
-
 }
 
 class MyView : View() {
 
-    val controller: PollController by inject()
+    private val idcontroller: PollController by inject(Scope(PollContext("src/interface/proteinIDs.txt")))
+    private val decisioncontroller: PollController by inject(Scope(PollContext("src/interface/Decision.txt")))
+    private val extracontroller: PollController by inject(Scope(PollContext("src/interface/Extra.txt")))
+    private val kcontroller: PollController by inject(Scope(PollContext("src/interface/K.txt")))
+    private val randomcontroller: PollController by inject(Scope(PollContext("src/interface/Random.txt")))
 
     private lateinit var controlfiles: File
     private lateinit var treatmentfiles: File
@@ -60,28 +73,37 @@ class MyView : View() {
     var treatments = MyFiles()
     var output = MyFiles()
     private val toggleGroup = ToggleGroup()
-    var toggleoutput = "MM"
-    var selectoutput = mutableListOf(1, 1, 1, 1, 1, 1)
+    var toggleoutput = SimpleStringProperty()
+    var selectoutput = mutableListOf(1, 1, 1, 1, 1, 1, 1)
     private var proteinIdList = mutableListOf<String>().observable()
     private var pID: TextField by singleAssign()
 
+    fun startControllers(types: List<PollController>) {
+        types.forEach {
+            it.stopped.not()
+            it.start()
+        }
+    }
+
     override val root = borderpane {
 
-        top = vbox(5, Pos.BOTTOM_CENTER) {
-            button("Start") {
-                disableProperty().bind( controller.stopped.not() )
-                setOnAction {
-                    controller.start()
-                }
-            }
-            label().bind(controller.currentData)
-            label("PeptideKerberus") {
+        startControllers(listOf(idcontroller, decisioncontroller, extracontroller, kcontroller, randomcontroller))
+
+        top = hbox(0, Pos.BOTTOM_CENTER) {
+            label("")
+            hbox(20, Pos.CENTER) {
+                label("PeptideKerberus") {
                     style {
                         fontSize = 24.px
                     }
                 }
-            label("")
+                imageview(Image("icon2.png")) {
+                    Pos.TOP_CENTER
+                    fitWidth = 50.0
+                    fitHeight = 50.0
+                }
             }
+        }
 
         left = vbox {
             setPrefSize(20.0, 500.0)
@@ -167,19 +189,25 @@ class MyView : View() {
                 }
                 vbox(20, Pos.CENTER_LEFT) {
                     label("")
-                    radiobutton("GPM", toggleGroup){
-                        if (isSelected) {
-                            toggleoutput = this.text
+                    radiobutton("GPM", toggleGroup) {
+                        action {
+                            if (isSelected) {
+                                toggleoutput.value = "GPM"
                             }
                         }
+                    }
                         radiobutton("Proteome Discoverer", toggleGroup) {
-                            if (isSelected) {
-                                toggleoutput = this.text
+                            action {
+                                if (isSelected) {
+                                    toggleoutput.value = "PD"
+                                }
                             }
                         }
                         radiobutton("Meta Morpheus", toggleGroup, value="MM") {
-                            if (isSelected) {
-                                toggleoutput = this.text
+                            action {
+                                if (isSelected) {
+                                    toggleoutput.value = "MM"
+                                }
                             }
                         }
                     }
@@ -246,6 +274,13 @@ class MyView : View() {
                             }
                         }
                     }
+
+                    vbox(30, Pos.TOP_CENTER) {
+                        progressbar().bind(kcontroller.context.currentDataProperty)
+                        progressbar().bind(randomcontroller.context.currentDataProperty)
+                        progressbar().bind(decisioncontroller.context.currentDataProperty)
+                        progressbar().bind(extracontroller.context.currentDataProperty)
+                    }
                 }
 
                 label("")
@@ -258,17 +293,27 @@ class MyView : View() {
 
                 hbox(20, Pos.CENTER) {
                     vbox(30, Pos.CENTER_LEFT) {
-                        label("Individual Forests")
+                        label("Individual Forests (Random)")
+                        label("Individual Forests (Isolation)")
                         label("Mega Isolation Forests")
                     }
                     vbox(20, Pos.CENTER_LEFT) {
                         togglebutton {
-                            val ifToggle = selectedProperty().stringBinding {
+                            val ifIsoToggle = selectedProperty().stringBinding {
                                 if (it == true) "ON" else "OFF"
                             }
-                            textProperty().bind(ifToggle)
+                            textProperty().bind(ifIsoToggle)
                             action {
                                 if (selectoutput[4] == 1) {selectoutput[4] = 0} else {selectoutput[4] = 1}
+                            }
+                        }
+                        togglebutton {
+                            val ifRanToggle = selectedProperty().stringBinding {
+                                if (it == true) "ON" else "OFF"
+                            }
+                            textProperty().bind(ifRanToggle)
+                            action {
+                                if (selectoutput[5] == 1) {selectoutput[5] = 0} else {selectoutput[5] = 1}
                             }
                         }
                         togglebutton {
@@ -277,7 +322,7 @@ class MyView : View() {
                             }
                             textProperty().bind(mfToggle)
                             action {
-                                if (selectoutput[5] == 1) {selectoutput[5] = 0} else {selectoutput[5] = 1}
+                                if (selectoutput[6] == 1) {selectoutput[6] = 0} else {selectoutput[6] = 1}
                             }
                         }
                     }
@@ -331,6 +376,7 @@ class MyView : View() {
                                     val clipboard = Clipboard.getSystemClipboard()
                                     if (clipboard.hasString()) {
                                         clipboard.string.split(System.lineSeparator()).forEach { proteinIdList.add(it) }
+                                        proteinIdList.removeAt(proteinIdList.lastIndex)
                                     }
                                 } // Allows us to paste clipboard into the box
                             }
@@ -382,18 +428,21 @@ class MyView : View() {
 
                 button("Start") {
                     action {
+                        File("src/interface/Lookfor.txt").writeText(proteinIdList.toString())
                         val actions = arrayOf(controls.getFilePathName(),
                                 treatments.getFilePathName(),
                                 outputdirec.path,
-                                toggleoutput,
+                                toggleoutput.value,
                                 selectoutput
                                 )
-                        actions.forEach { println(it) }
-                        base.main(actions)
+                        actions.forEach {println(it)}
+                        thread { base.main(actions) } // Wow that's so simple! This is how you run a function in parallel so that the GUI doesn't lock
+                        this.isDisable = true
                     }
                 }
                 scrollpane {
                     textarea("Output") {
+                        setPrefSize(200.0, 400.0)
                         style{
                             fontStyle = FontPosture.ITALIC
                         }
@@ -418,8 +467,16 @@ class Main : App() {
     override val primaryView = MyView::class
 
     override fun start(stage: Stage) {
+        File("src\\interface\\").walkTopDown().forEachIndexed { index, file ->
+            if (index != 0) {
+                file.writeText("0.01")
+            }
+        }
         super.start(stage)
-        stage.width = 1200.0
+        stage.width = 1220.0
         stage.height = 600.0
+        stage.isResizable = false
+        stage.centerOnScreen()
+        addStageIcon(Image("icon2.png"))
     }
 }

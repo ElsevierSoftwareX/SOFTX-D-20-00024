@@ -328,7 +328,6 @@ fun runMachineBase(args: List<String>, algorithms: String) {
     val carrier = "cmd /c python C:\\Users\\David\\IdeaProjects\\PeptideKerberusBucket\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
     println(carrier)
     Runtime.getRuntime().exec(carrier)
-    println("?")
 }
 
 fun main(args: Array<Any>){
@@ -337,7 +336,6 @@ fun main(args: Array<Any>){
     val permutations = permutationmaker.perm()
     val perftime = starttimer()
     val kerberusFDR = .5
-    println("Input the Search Engine: PD or GPM or MM")
     //val engine = engineLoop()
     val engine = args[3].toString()
     val machineargs = args[4].toString().replace("]", "").replace("[", "")
@@ -347,7 +345,7 @@ fun main(args: Array<Any>){
     val treatmentpath = args[1].toString() + '\\'
     val outputpath = args[2].toString() + '\\'
     val directorylist = listOf(outputpath + "6by6\\", outputpath + "400\\",
-            outputpath + "permcategories\\", outputpath + "MultiLabel\\")
+            outputpath + "permcategories\\", outputpath + "Results\\")
     directorylist.forEach { File(it).mkdirs() }
     val controlIDList = pullCSV(controlpath, engine)
     val treatmentIDList = pullCSV(treatmentpath, engine)
