@@ -15,6 +15,10 @@ import tornadofx.*
 import java.io.File
 import base.*
 import javafx.beans.property.SimpleDoubleProperty
+import javafx.beans.property.SimpleObjectProperty
+import javafx.beans.value.ObservableBooleanValue
+import javafx.beans.value.ObservableStringValue
+import javafx.beans.value.ObservableValue
 import javafx.scene.image.Image
 import kotlin.concurrent.thread
 
@@ -58,6 +62,46 @@ class PollController : Controller() {
     }
 }
 
+data class StringResult(val data: SimpleStringProperty)
+
+class PollContextS(path: String) : ViewModel() {
+    val pathProperty = SimpleStringProperty(path)
+    var path by pathProperty
+
+    val currentDataProperty = SimpleStringProperty()
+    var currentData by currentDataProperty
+}
+
+class PollControllerS : Controller() {
+
+    val context : PollContextS by inject()
+
+    val stopped = SimpleBooleanProperty(true)
+
+    val scheduledService = object : ScheduledService<StringResult>() {
+        init {
+            period = Duration.seconds(0.01)
+        }
+        override fun createTask() : Task<StringResult> = FetchDataTask()
+    }
+
+    fun start() {
+        scheduledService.restart()
+        stopped.value = false
+    }
+
+    inner class FetchDataTask : Task<StringResult>() {
+
+        override fun call() : StringResult {
+            return StringResult(SimpleStringProperty(File(context.path).readText().toString()))
+        }
+
+        override fun succeeded() {
+            this@PollControllerS.context.currentData = value.data.value // Here is the value of the test file
+        }
+    }
+}
+
 class MyView : View() {
 
     private val idcontroller: PollController by inject(Scope(PollContext("src/interface/proteinIDs.txt")))
@@ -65,6 +109,7 @@ class MyView : View() {
     private val extracontroller: PollController by inject(Scope(PollContext("src/interface/Extra.txt")))
     private val kcontroller: PollController by inject(Scope(PollContext("src/interface/K.txt")))
     private val randomcontroller: PollController by inject(Scope(PollContext("src/interface/Random.txt")))
+    private val outputcontroller: PollControllerS by inject(Scope(PollContextS("src/interface/Update.txt")))
 
     private lateinit var controlfiles: File
     private lateinit var treatmentfiles: File
@@ -74,9 +119,11 @@ class MyView : View() {
     var output = MyFiles()
     private val toggleGroup = ToggleGroup()
     var toggleoutput = SimpleStringProperty()
-    var selectoutput = mutableListOf(1, 1, 1, 1, 1, 1, 1)
+    var selectoutput = mutableListOf(1, 1, 1, 1, 0, 1, 1)
     private var proteinIdList = mutableListOf<String>().observable()
     private var pID: TextField by singleAssign()
+    private var visiblebar = SimpleObjectProperty<Boolean>(false)
+    private var startbuttondisable = SimpleObjectProperty<Boolean>(false)
 
     fun startControllers(types: List<PollController>) {
         types.forEach {
@@ -88,6 +135,8 @@ class MyView : View() {
     override val root = borderpane {
 
         startControllers(listOf(idcontroller, decisioncontroller, extracontroller, kcontroller, randomcontroller))
+        outputcontroller.stopped.not()
+        outputcontroller.start()
 
         top = hbox(0, Pos.BOTTOM_CENTER) {
             label("")
@@ -299,19 +348,20 @@ class MyView : View() {
                     }
                     vbox(20, Pos.CENTER_LEFT) {
                         togglebutton {
-                            val ifIsoToggle = selectedProperty().stringBinding {
-                                if (it == true) "ON" else "OFF"
+                            this.isDisable = true
+                            val ifRanToggle = selectedProperty().stringBinding {
+                                    if (it == true) "OFF" else "OFF"
                             }
-                            textProperty().bind(ifIsoToggle)
+                            textProperty().bind(ifRanToggle)
                             action {
                                 if (selectoutput[4] == 1) {selectoutput[4] = 0} else {selectoutput[4] = 1}
                             }
                         }
                         togglebutton {
-                            val ifRanToggle = selectedProperty().stringBinding {
+                            val ifIsoToggle = selectedProperty().stringBinding {
                                 if (it == true) "ON" else "OFF"
                             }
-                            textProperty().bind(ifRanToggle)
+                            textProperty().bind(ifIsoToggle)
                             action {
                                 if (selectoutput[5] == 1) {selectoutput[5] = 0} else {selectoutput[5] = 1}
                             }
@@ -427,7 +477,9 @@ class MyView : View() {
                 }
 
                 button("Start") {
+                    disableProperty().bind(startbuttondisable)
                     action {
+                        visiblebar.value = true
                         File("src/interface/Lookfor.txt").writeText(proteinIdList.toString())
                         val actions = arrayOf(controls.getFilePathName(),
                                 treatments.getFilePathName(),
@@ -437,19 +489,20 @@ class MyView : View() {
                                 )
                         actions.forEach {println(it)}
                         thread { base.main(actions) } // Wow that's so simple! This is how you run a function in parallel so that the GUI doesn't lock
-                        this.isDisable = true
+                        startbuttondisable.value = true
                     }
                 }
-                scrollpane {
-                    textarea("Output") {
+                progressbar {
+                    visibleProperty().bind(visiblebar)
+                }
+                textfield {
+                        textProperty().bind(outputcontroller.context.currentDataProperty)
                         setPrefSize(200.0, 400.0)
                         style{
                             fontStyle = FontPosture.ITALIC
                         }
                         isEditable = false
-                    }
                 }
-                progressbar()
             }
         }
 
@@ -473,10 +526,11 @@ class Main : App() {
             }
         }
         super.start(stage)
+        addStageIcon(Image("icon2.png"))
         stage.width = 1220.0
         stage.height = 600.0
-        stage.isResizable = false
+        stage.maxHeight = 600.0
+        stage.isResizable = true
         stage.centerOnScreen()
-        addStageIcon(Image("icon2.png"))
     }
 }

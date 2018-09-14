@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" line="124" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="17d68495-1d58-4635-afb7-94c66524204b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/interface/Lookfor.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Update.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machinebase.py" beforeDir="false" afterPath="$PROJECT_DIR$/machinebase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/BaseKt.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Protein.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/TTestProtein.class" beforeDir="false" />
@@ -18,13 +21,9 @@
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R4.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R5.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Decision.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Decision.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Extra.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Extra.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/K.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/K.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Random.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/proteinIDs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/proteinIDs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/Lookfor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Lookfor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/folder25px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/folder25px.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/threads.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -110,18 +109,19 @@
     <session id="-629251434">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="37" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="6" />
           <entry key="project.open.time.11" value="6" />
-          <entry key="project.open.time.12" value="5" />
+          <entry key="project.open.time.12" value="6" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -135,7 +135,7 @@
           <entry key="proteinIDs" value="2" />
           <entry key="py" value="3" />
           <entry key="test" value="4" />
-          <entry key="txt" value="51" />
+          <entry key="txt" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -145,7 +145,7 @@
           <entry key="Image" value="1" />
           <entry key="JAVA" value="2" />
           <entry key="Kotlin" value="16" />
-          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="PLAIN_TEXT" value="63" />
           <entry key="Python" value="2" />
           <entry key="XML" value="3" />
         </counts>
@@ -155,21 +155,21 @@
           <entry key="css" value="421" />
           <entry key="fxml" value="562" />
           <entry key="gradle" value="141" />
-          <entry key="java" value="132" />
-          <entry key="kt" value="24776" />
+          <entry key="java" value="144" />
+          <entry key="kt" value="25753" />
           <entry key="proteinIDs" value="1" />
           <entry key="py" value="2481" />
           <entry key="test" value="23" />
-          <entry key="txt" value="105" />
+          <entry key="txt" value="161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="421" />
           <entry key="Groovy" value="141" />
-          <entry key="JAVA" value="132" />
-          <entry key="Kotlin" value="24776" />
-          <entry key="PLAIN_TEXT" value="129" />
+          <entry key="JAVA" value="144" />
+          <entry key="Kotlin" value="25753" />
+          <entry key="PLAIN_TEXT" value="185" />
           <entry key="Python" value="2481" />
           <entry key="XML" value="562" />
         </counts>
@@ -179,38 +179,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="433" column="38" lean-forward="true" selection-start-line="433" selection-start-column="38" selection-end-line="433" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="283" column="9" lean-forward="true" selection-start-line="283" selection-start-column="9" selection-end-line="283" selection-end-column="9" />
+            <state relative-caret-position="486">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7132">
+              <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+              <folding>
+                <element signature="n#!!block;n#PollContext#0" />
+                <element signature="n#!!block;n#PollController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/interface/Update.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2394">
+              <caret line="142" column="121" selection-start-line="142" selection-start-column="121" selection-end-line="142" selection-end-column="121" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machinebase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="96" column="59" lean-forward="true" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#432#826#0" />
-                <element signature="e#884#1606#0" />
-                <element signature="e#5094#6239#0" />
-                <element signature="e#6289#7402#0" />
-                <element signature="e#7573#11128#0" />
-                <element signature="e#11106#11591#0" />
-                <marker date="1534059810827" expanded="true" signature="11705:12562" ph="..." />
-              </folding>
+            <state relative-caret-position="1602">
+              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -230,12 +238,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>35</find>
-      <find>calculator</find>
-      <find>op</find>
-      <find>controlfiles</find>
-      <find>control</find>
-      <find>No FOlder</find>
       <find>bind</find>
       <find>MyFiles(</find>
       <find>textfield</find>
@@ -260,6 +262,12 @@
       <find>iftoggle</find>
       <find>lookoutIDS</find>
       <find>show</find>
+      <find>Output</find>
+      <find>random</find>
+      <find>individual forests</find>
+      <find>ifRanToggle</find>
+      <find>randomcontroller</find>
+      <find>Lookfor</find>
     </findStrings>
     <replaceStrings>
       <replace>rforestarray</replace>
@@ -722,9 +730,10 @@
         <option value="$PROJECT_DIR$/src/interface/K.txt" />
         <option value="$PROJECT_DIR$/src/interface/Extra.txt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Test.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/base/base.kt" />
         <option value="$PROJECT_DIR$/machinebase.py" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" />
+        <option value="$PROJECT_DIR$/src/interface/Update.txt" />
       </list>
     </option>
   </component>
@@ -747,9 +756,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="708" />
-    <option name="y" value="51" />
-    <option name="width" value="1137" />
+    <option name="x" value="-12" />
+    <option name="width" value="981" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -758,7 +766,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -777,28 +784,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="interface" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/David/IdeaProjects/PeptideKerberusBucket/src/main/resources/Calculator.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534059842494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535695016207" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;kotlin" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="kotlin" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/PeptideWitchBucket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -992,12 +994,18 @@
       <workItem from="1533860745428" duration="4538000" />
       <workItem from="1533877475063" duration="871000" />
       <workItem from="1534050218619" duration="52000" />
-      <workItem from="1534051372054" duration="8436000" />
+      <workItem from="1534051372054" duration="8762000" />
+      <workItem from="1534131971135" duration="187000" />
+      <workItem from="1534659764277" duration="201000" />
+      <workItem from="1534660008597" duration="6976000" />
+      <workItem from="1534735505223" duration="30000" />
+      <workItem from="1535693061394" duration="795000" />
+      <workItem from="1535694623051" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259444000" />
+    <option name="totallyTimeSpent" value="268769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1009,7 +1017,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5150812" side_tool="true" weight="0.25020242" />
       <window_info id="Designer" order="1" />
@@ -1017,10 +1026,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.25991902" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.1805668" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.08007117" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49068826" weight="0.7544484" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48987854" weight="0.7455516" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28291816" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1028,11 +1037,11 @@
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49959514" weight="0.8121646" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.7081851" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50931174" side_tool="true" weight="0.1797153" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23131673" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51012146" side_tool="true" weight="0.17615658" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.7366548" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.47508895" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.24021353" />
       <window_info anchor="bottom" id="Scratch Output" order="15" weight="0.084078714" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1262,16 +1271,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/interface/K.txt" />
-    <entry file="file://$PROJECT_DIR$/src/interface/proteinIDs.txt" />
     <entry file="file://$PROJECT_DIR$/src/interface/Random.txt" />
     <entry file="file://$PROJECT_DIR$/src/interface/Decision.txt" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interface/Extra.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1279,40 +1280,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="433" column="38" lean-forward="true" selection-start-line="433" selection-start-column="38" selection-end-line="433" selection-end-column="38" />
+        <state relative-caret-position="486">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="283" column="9" lean-forward="true" selection-start-line="283" selection-start-column="9" selection-end-line="283" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interface/Lookfor.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="244" lean-forward="true" selection-start-column="244" selection-end-column="244" />
+        <state relative-caret-position="2394">
+          <caret line="142" column="121" selection-start-line="142" selection-start-column="121" selection-end-line="142" selection-end-column="121" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/machinebase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="96" column="59" lean-forward="true" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
+        <state relative-caret-position="1602">
+          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7132">
+          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#432#826#0" />
-            <element signature="e#884#1606#0" />
-            <element signature="e#5094#6239#0" />
-            <element signature="e#6289#7402#0" />
-            <element signature="e#7573#11128#0" />
-            <element signature="e#11106#11591#0" />
-            <marker date="1534059810827" expanded="true" signature="11705:12562" ph="..." />
+            <element signature="n#!!block;n#PollContext#0" />
+            <element signature="n#!!block;n#PollController#0" />
           </folding>
         </state>
       </provider>
