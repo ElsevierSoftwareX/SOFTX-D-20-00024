@@ -37,7 +37,7 @@ def importCSV(kfilepath, tfilepath, catfilepath):
 
     test = pd.read_csv(tfilepath, delimiter=',', header=None, names=['ID', 'lnnsaf', 'spc'], quotechar='"')
     test.set_index('ID', drop=True, inplace=True)
-
+ 
     label = pd.read_csv(catfilepath, delimiter=',', header=None)
 
     return outerjoinln, outerjoinsp, test, label
@@ -52,12 +52,12 @@ def individualForests(kerberusln, kerberussp, testdata, type, time, look, output
 
     if type == "Isolation":
         forest = IsolationForest(max_samples='auto', contamination=0.2)
-        os.makedirs(outputfolder + 'Individual/IsolationForest/')
+        os.makedirs(outputfolder + 'Individual/IsolationForest/', exist_ok=True)
         foldername = outputfolder + 'Individual/IsolationForest/'
 
     if type == "RandomClassifier":
         forest = RandomForestClassifier(n_estimators=100)
-        os.makedirs(outputfolder + 'Individual/RandomClassifierForest/')
+        os.makedirs(outputfolder + 'Individual/RandomClassifierForest/', exist_ok=True)
         foldername = outputfolder + 'Individual/RandomClassifierForest/'
 
     # This section here will produce 400 separate forests, 1 for every ttest combo,
@@ -177,9 +177,9 @@ def megaIsolationForest(totaldf, testdf):
     plt.close("all")
 
 
-def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels, usertypes, outputfolder):
+def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels, usertypes, outputfolder, root):
 
-    os.mkdir(outputfolder + "/MultiLabel/")
+    os.makedirs(outputfolder + "MultiLabel/", exist_ok=True)
 
     forestcollection = []
     possibletypes = ["KNeighbors", "Random Forest", "Decision Tree", "Extra Trees"]
@@ -225,18 +225,19 @@ def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels, usertype
 
             print("Currently Conducting: " + possibletypes[count])
 
-            file = open('src/interface/proteinIDs.txt', 'w')
+            # Commented out before?
+            file = open(f'{root}/src/interface/proteinIDs.txt', 'w')
             file.write(str(len(testdatalist)))
             file.close()
 
             if possibletypes[count] == "KNeighbors":
-                path = 'src/interface/K.txt'
+                path = f'{root}/src/interface/K.txt'
             if possibletypes[count] == "Extra Trees":
-                path = 'src/interface/Extra.txt'
+                path = f'{root}/src/interface/Extra.txt'
             if possibletypes[count] == "Random Forest":
-                path = 'src/interface/Random.txt'
+                path = f'{root}/src/interface/Random.txt'
             if possibletypes[count] == "Decision Tree":
-                path = 'src/interface/Decision.txt'
+                path = f'{root}/src/interface/Decision.txt'
 
             testsize = testdata.shape[0]
             testindexes = [i for i in range(len(testdatalist))]
@@ -270,9 +271,12 @@ def performClassifierProcess(testdatalist, traindatalist, foresttype, size, test
     try:
         foresttype.fit(traindatalist.loc[:, "lnNSAF":"SpC"], traindatalist.loc[:, "Label 1":"Label 12"])
         prediction = pd.DataFrame(foresttype.predict(testdatalist)).apply(lambda x: int(x))
+
+        # Commented out before?
         file = open(path, 'w')
         file.write(str(testnum/size))
         file.close()
+
         return np.array(prediction)
     except ValueError:
         print("Warning: Incompatible Test @: " + str(testnum))
@@ -282,13 +286,16 @@ def performClassifierProcess(testdatalist, traindatalist, foresttype, size, test
 def processingArguments(arg):
 
     tt = []
-    out400 = sys.argv[2].replace(',', '')  # 400 Output folder
-    direc6 = sys.argv[1].replace(',', '')  # 6by6 Output folder
-    perm = sys.argv[3].replace(',', '')  # PerCat Output folder
-    result = sys.argv[4].replace(',', '')  # Folder for All Machine leaning outputs
-    for i in sys.argv[5:12]:
+    out400 = arg[2].replace(',', '')  # 400 Output folder
+    direc6 = arg[1].replace(',', '')  # 6by6 Output folder
+    perm = arg[3].replace(',', '')  # PerCat Output folder
+    result = arg[4].replace(',', '')  # Folder for All Machine leaning outputs
+    for i in arg[5:12]:
         tt.append(int(i.replace(',', '')))  # What tests to perform
-    lookID = open('src/interface/Lookfor.txt', 'r').readline()
+    root_folder_id = '/'.join(arg[0].split('\\')[:-1])
+
+    # Commented out before?
+    lookID = open(f"{root_folder_id}/src/interface/Lookfor.txt", 'r').readline()
     if lookID != "[]":
         print(lookID)
         lookout = lookID.replace('[', '').replace(']', '').split(',')
@@ -298,21 +305,23 @@ def processingArguments(arg):
     else:
         lookout = ["All"]
 
-    return tt, out400, direc6, perm, result, lookout
+    #lookout = ["All"]
+
+    return tt, out400, direc6, perm, result, lookout, root_folder_id
 
 if __name__ == '__main__':
     time = str(dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
 
-    testtypes, outputdirec400, outputdirec6, outputdirecperm, outputresults, lookoutIDs = \
+    testtypes, outputdirec400, outputdirec6, outputdirecperm, outputresults, lookoutIDs, root = \
         processingArguments(sys.argv)
 
     Kerberusdataln, Kerberusdatasp, Testdata, Labels = \
         importCSV(outputdirec400, str(outputdirec6 + "/result.csv"), str(outputdirecperm +"/permtotal.csv"))
 
     if sum(testtypes[0:4]) > 0:
-        multiLabelMultiClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels, testtypes[0:4], outputresults)
+        multiLabelMultiClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels, testtypes[0:4], outputresults, root)
     if sum(testtypes[4:6]) > 0:
-        os.makedirs(outputresults + 'Individual/')
+        os.makedirs(outputresults + 'Individual/', exist_ok=True)
     if testtypes[4] == 1:
         individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "RandomClassifier", time, lookoutIDs, outputresults)
     if testtypes[5] == 1:

@@ -5,26 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d68495-1d58-4635-afb7-94c66524204b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/interface/Update.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machinebase.py" beforeDir="false" afterPath="$PROJECT_DIR$/machinebase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/BaseKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Protein.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/TTestProtein.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/TTestResult.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/UniqueProtein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/treatment/Old-R6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Lookfor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Lookfor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/permutationmaker/PermuteKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/permutationmaker/PermuteKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt$p2Tail$f$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt$p2Tail$f$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/Decision.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Decision.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/K.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/K.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/Random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Random.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface/proteinIDs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/proteinIDs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/folder25px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/folder25px.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -48,6 +60,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -105,93 +120,31 @@
       </state>
     </system>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-629251434">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="37" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="6" />
-          <entry key="project.open.time.11" value="6" />
-          <entry key="project.open.time.12" value="6" />
-          <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="4" />
-          <entry key="project.open.time.15" value="3" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="38" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="3" />
-          <entry key="fxml" value="3" />
-          <entry key="gradle" value="4" />
-          <entry key="java" value="2" />
-          <entry key="kt" value="16" />
-          <entry key="png" value="1" />
-          <entry key="proteinIDs" value="2" />
-          <entry key="py" value="3" />
-          <entry key="test" value="4" />
-          <entry key="txt" value="56" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="3" />
-          <entry key="Groovy" value="4" />
-          <entry key="Image" value="1" />
-          <entry key="JAVA" value="2" />
-          <entry key="Kotlin" value="16" />
-          <entry key="PLAIN_TEXT" value="63" />
-          <entry key="Python" value="2" />
-          <entry key="XML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="421" />
-          <entry key="fxml" value="562" />
-          <entry key="gradle" value="141" />
-          <entry key="java" value="144" />
-          <entry key="kt" value="25753" />
-          <entry key="proteinIDs" value="1" />
-          <entry key="py" value="2481" />
-          <entry key="test" value="23" />
-          <entry key="txt" value="161" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="421" />
-          <entry key="Groovy" value="141" />
-          <entry key="JAVA" value="144" />
-          <entry key="Kotlin" value="25753" />
-          <entry key="PLAIN_TEXT" value="185" />
-          <entry key="Python" value="2481" />
-          <entry key="XML" value="562" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="396">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/machinebase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7132">
-              <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+            <state relative-caret-position="8496">
+              <caret line="528" column="11" selection-start-line="528" selection-start-column="11" selection-end-line="528" selection-end-column="11" />
               <folding>
                 <element signature="n#!!block;n#PollContext#0" />
                 <element signature="n#!!block;n#PollController#0" />
@@ -200,25 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interface/Update.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2394">
-              <caret line="142" column="121" selection-start-line="142" selection-start-column="121" selection-end-line="142" selection-end-column="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machinebase.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1602">
-              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+            <state relative-caret-position="124">
+              <caret line="342" column="31" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -238,7 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bind</find>
       <find>MyFiles(</find>
       <find>textfield</find>
       <find>currentData</find>
@@ -268,6 +206,7 @@
       <find>ifRanToggle</find>
       <find>randomcontroller</find>
       <find>Lookfor</find>
+      <find>KNeighborsClassifier</find>
     </findStrings>
     <replaceStrings>
       <replace>rforestarray</replace>
@@ -275,424 +214,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="myGradleHomes">
-      <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\David\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
-      </map>
-    </option>
-    <option name="myGradleVersions">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4.4" />
-      </map>
-    </option>
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="PeptideKerberus" />
-              <option name="path" value="$PROJECT_DIR$" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="PeptideKerberus" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="availableTasks">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'PeptideKerberus'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="inspectClassesForKotlinIC" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="classes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'PeptideKerberus'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Gradle wrapper files." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="wrapper" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="jar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'PeptideKerberus'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes main resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Initializes a new Gradle build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles main Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'test'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestKotlin" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles the outputs of this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="clean" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'main'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileKotlin" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="build" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'PeptideKerberus'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$" value="6110343028376" />
-        <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1068593529" />
-        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="3411435536" />
-      </map>
-    </option>
-    <option name="projectBuildClasspath">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <ExternalProjectBuildClasspathPojo>
-              <option name="modulesBuildClasspath">
-                <map>
-                  <entry key="$PROJECT_DIR$">
-                    <value>
-                      <ExternalModuleBuildClasspathPojo>
-                        <option name="entries">
-                          <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.51/aecae45d74a02e6302b967d37c948802d03495f/kotlin-gradle-plugin-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.51/e43dea38cb1055ee07824ea9b5914c16fc8f02f0/kotlin-gradle-plugin-api-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.51/8bb19b3d20cbb1498ce98ac56cad1107ed5355b0/kotlin-compiler-embeddable-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.51/c3d255ffe5c10d60e3c09ba5aee868a3907e33ad/kotlin-annotation-processing-gradle-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.51/3a04003373be1b42f8615dd6fc737c44d80ebd4b/kotlin-android-extensions-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.51/c95f21556c0ee6246745bca9f15f45400b39c737/kotlin-compiler-runner-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.51/f55f2b742e87f3424754e572763c9960dab8a5e8/kotlin-reflect-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.2.51/8bed853d57ddc87fcab4c100421aa8a654d36f99/kotlin-scripting-common-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler/1.2.51/ca2324aa47aec7266ee6b7839596899a5a92a250/kotlin-scripting-compiler-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-gradle/1.2.51/7c764fa8943de9edabbf4e2e7a1912a871a10b95/kotlin-scripting-gradle-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.51/6522b3c352cee32fa8a6a8184d955f20af8469b0/kotlin-script-runtime-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.51/a491f5743a35bb1b884b0a5141c33abdea08654c/kotlin-build-common-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.51/5a2d34f7ec26cdeddb329bda7f6fa99a44b981be/kotlin-daemon-client-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/0.20/69aa4e6352eee317fe50ae2146ec628c59be3845/kotlinx-coroutines-core-0.20-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.2.51/958337dbddf8b87f3f688b942b89738356745326/kotlin-scripting-jvm-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-misc/1.2.51/f15e62280560a4167f13b38cf40869eb4a8542c4/kotlin-scripting-misc-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.51/e8c91083a5863d94fdc2836459e7e7a555774be9/kotlin-stdlib-common-1.2.51-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.51/d98bfc97c13e068b768f95271b6a58bafd16fce7/kotlin-gradle-plugin-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.51/94527237963c0dbd7c1c7f0b9a63c629401e72e0/kotlin-gradle-plugin-api-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.51/205147cc6c2dcbe7d9d71125fe315b14b8a14be4/kotlin-compiler-embeddable-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.51/8cd0f527d68195e3c008302744ad319d24499cd7/kotlin-annotation-processing-gradle-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.51/1755c607e5fabf4ba949ef626c73fc7421d35123/kotlin-android-extensions-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.51/f33d0a38c0d98e249e15a72616837c26bb15aabd/kotlin-compiler-runner-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.51/36b719a7b84452dd13eeec979d8c82bfb765c57d/kotlin-reflect-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.2.51/7861b42b7e5625df4a230d868476d4cda331be77/kotlin-scripting-common-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler/1.2.51/a8600da3b271224db902d8a30a4898a861b008ca/kotlin-scripting-compiler-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-gradle/1.2.51/f50fc613dac15993ca81fda328fb33a973f18915/kotlin-scripting-gradle-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/fa8127e505bff50fec291d0dd619d1bda5c619e0/kotlin-stdlib-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.51/6f8ef6758f396b354e422c3e82d9cd14795fe0e2/kotlin-script-runtime-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.51/114e0ff82a2fc1f4e55d6525137a69f2f8da4f52/kotlin-build-common-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.51/54cd719230806bfc119b6f9a28e33416233a8971/kotlin-daemon-client-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/0.20/5f3fa9b5b2dc9cfc0d9358d5b2cab154d590a564/kotlinx-coroutines-core-0.20.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.2.51/f80afc81cf004fb572f8a09353960490ab6630c6/kotlin-scripting-jvm-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-misc/1.2.51/e7645e214f9178ed1423c937fc4e2f3bd04c8831/kotlin-scripting-misc-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.51/e4a9d4b13ab19ed1e6531fce6df98e8cfa7f7301/kotlin-stdlib-common-1.2.51.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
-                          </list>
-                        </option>
-                        <option name="path" value="$PROJECT_DIR$" />
-                      </ExternalModuleBuildClasspathPojo>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="name" value="PeptideKerberus" />
-              <option name="projectBuildClasspath">
-                <list>
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/announce" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/antlr" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/base-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/base-services-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/build-cache" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/build-cache-http" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/build-comparison" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/build-init" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/build-option" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/cli" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/code-quality" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/composite-builds" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/core" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/core-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/dependency-management" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/diagnostics" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/ear" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/ide" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/ide-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/ide-play" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/installation-beacon" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/internal-android-performance-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/internal-integ-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/internal-performance-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/internal-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/ivy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/jacoco" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/javascript" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/jvm-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/language-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/language-java" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/language-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/language-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/language-scala" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/launcher" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/logging" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/maven" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/messaging" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/model-core" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/model-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/osgi" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/persistent-cache" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/platform-base" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/platform-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/platform-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/platform-play" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/plugin-development" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/plugin-use" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/plugins" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/process-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/publish" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/reporting" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/resources" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/resources-gcs" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/resources-http" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/resources-s3" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/resources-sftp" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/scala" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/signing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/test-kit" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/testing-base" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/testing-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/testing-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/tooling-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/tooling-api-builders" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/version-control" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/workers" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/wrapper" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/ant-1.9.9.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/ant-launcher-1.9.9.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-base-services-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-base-services-groovy-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-build-cache-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-build-option-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-cli-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-core-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-core-api-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-docs-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-installation-beacon-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-jvm-services-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-kotlin-dsl-0.13.1.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-kotlin-dsl-tooling-builders-0.13.1.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-kotlin-dsl-tooling-models-0.13.1.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-launcher-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-logging-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-messaging-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-model-core-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-model-groovy-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-native-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-persistent-cache-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-process-services-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-resources-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-runtime-api-info-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-tooling-api-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/gradle-wrapper-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/groovy-all-2.4.12.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-announce-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-antlr-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-build-cache-http-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-build-comparison-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-build-init-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-code-quality-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-composite-builds-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-dependency-management-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-diagnostics-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-ear-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-ide-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-ide-native-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-ide-play-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-ivy-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-jacoco-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-javascript-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-language-groovy-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-language-java-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-language-jvm-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-language-native-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-language-scala-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-maven-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-osgi-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-platform-base-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-platform-jvm-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-platform-native-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-platform-play-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-plugin-development-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-plugin-use-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-plugins-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-publish-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-reporting-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-resources-gcs-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-resources-http-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-resources-s3-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-resources-sftp-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-scala-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-signing-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-test-kit-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-testing-base-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-testing-jvm-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-testing-native-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-tooling-api-builders-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-version-control-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/gradle-workers-4.4.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/lib/plugins/ivy-2.2.0.jar" />
-                </list>
-              </option>
-            </ExternalProjectBuildClasspathPojo>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$/../Fokus" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-        <entry key="$PROJECT_DIR$/../kotlin-koans" value="PREVIEW" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -718,7 +239,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/Application.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/MyApp.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Filepath.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/pykotinterface/test" />
         <option value="$PROJECT_DIR$/src/pykotinterface/test.txt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/base.kt" />
@@ -730,24 +250,24 @@
         <option value="$PROJECT_DIR$/src/interface/K.txt" />
         <option value="$PROJECT_DIR$/src/interface/Extra.txt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Test.kt" />
+        <option value="$PROJECT_DIR$/src/interface/Update.txt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/base/base.kt" />
         <option value="$PROJECT_DIR$/machinebase.py" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" />
-        <option value="$PROJECT_DIR$/src/interface/Update.txt" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="PeptideKerberus/invalid/Python" />
+    </ignored-facets>
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -755,10 +275,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1137" />
+    <option name="y" value="-14" />
+    <option name="width" value="1734" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -766,38 +287,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PeptideKerberusBucket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="kerberus" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/David/IdeaProjects/PeptideKerberusBucket/src/main/resources/Calculator.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535695016207" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553597966965" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;kotlin" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="kotlin" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -807,7 +317,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.27941176" />
     <property name="project.structure.side.proportion" value="0.2786624" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -837,7 +347,29 @@
     </option>
   </component>
   <component name="RunManager" selected="TornadoFX.Main">
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="PeptideKerberus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -850,6 +382,7 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -857,17 +390,17 @@
       </method>
     </configuration>
     <configuration name="machinebase" type="PythonConfigurationType" factoryName="Python">
-      <module name="PeptideKerberusBucket" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\David\Anaconda3\envs\kerberus\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machinebase.py" />
       <option name="PARAMETERS" value="" />
@@ -878,13 +411,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+    <configuration name="Main" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PeptideKerberus_test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
@@ -894,9 +429,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Python.machinebase" />
       <item itemvalue="TornadoFX.Main" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TornadoFX.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1001,11 +540,24 @@
       <workItem from="1534735505223" duration="30000" />
       <workItem from="1535693061394" duration="795000" />
       <workItem from="1535694623051" duration="26000" />
+      <workItem from="1553593730177" duration="884000" />
+      <workItem from="1553594652739" duration="1161000" />
+      <workItem from="1553596794965" duration="1668000" />
+      <workItem from="1553727441320" duration="1280000" />
+      <workItem from="1559305692871" duration="24000" />
+      <workItem from="1578873315158" duration="2089000" />
+      <workItem from="1578892591920" duration="1139000" />
+      <workItem from="1579943616955" duration="181000" />
+      <workItem from="1580117765975" duration="2179000" />
+      <workItem from="1582193625407" duration="1419000" />
+      <workItem from="1582326455771" duration="1444000" />
+      <workItem from="1582328289694" duration="463000" />
+      <workItem from="1584609463219" duration="4952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268769000" />
+    <option name="totallyTimeSpent" value="287668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1017,8 +569,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5150812" side_tool="true" weight="0.25020242" />
       <window_info id="Designer" order="1" />
@@ -1026,15 +577,15 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.1805668" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.08775029" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.08007117" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48987854" weight="0.7455516" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48987854" visible="true" weight="0.37490258" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28291816" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959514" weight="0.20818505" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49959514" weight="0.8121646" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49959514" weight="0.4895178" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.23131673" />
@@ -1043,6 +594,7 @@
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.7366548" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.24021353" />
       <window_info anchor="bottom" id="Scratch Output" order="15" weight="0.084078714" />
+      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1057,6 +609,8 @@
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info anchor="right" id="sbt" order="12" />
       <window_info anchor="right" id="SciView" order="13" weight="0.2782462" />
+      <window_info anchor="right" id="Maven" order="14" />
+      <window_info anchor="right" x="0" y="0" width="434" height="896" id="Documentation" order="15" side_tool="true" visible="true" weight="0.08901919" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.5150812" side_tool="true" weight="0.25020242" />
@@ -1101,6 +655,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -1126,36 +683,29 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="537" selection-start-line="537" selection-end-line="537" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/MapWithDefault.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="431" column="13" selection-start-line="431" selection-start-column="13" selection-end-line="431" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Double.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/MapWithDefault.kt" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/ttest/welchttest.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1164,13 +714,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/Any.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/Any.kt" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1178,46 +722,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/PeptideWitchBucket/heatmap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/PeptideWitchBucket/heatmap.py" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/permutations/permute.kt" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.kts" />
-    <entry file="file://$USER_HOME$/PycharmProjects/PeptideWitchBucket/PepWitch2.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="617" column="54" lean-forward="true" selection-start-line="617" selection-start-column="54" selection-end-line="617" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/PeptideWitchBucket/PepWitch2.1.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/s.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_16.py" />
-    <entry file="file://$PROJECT_DIR$/../PeptideKerberus/src/main/kotlin/base.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="207" column="53" selection-start-line="207" selection-start-column="53" selection-end-line="207" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="769" selection-start-line="769" selection-end-line="769" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../PeptideKerberus/src/main/kotlin/base.kt" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/NumberFormatException.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Integer.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/threading.py" />
     <entry file="file://$PROJECT_DIR$/threads.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1241,35 +755,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Calculator.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Operator.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/openfolder50px.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pykotinterface/test" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/filepath.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="512" selection-start-line="512" selection-end-line="513" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/File.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/FileInputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/interface/K.txt" />
     <entry file="file://$PROJECT_DIR$/src/interface/Random.txt" />
     <entry file="file://$PROJECT_DIR$/src/interface/Decision.txt" />
@@ -1280,35 +768,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/filepath.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/folder25px.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/image/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1109" selection-start-line="1109" selection-end-line="1109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Lookfor.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="142" column="121" selection-start-line="142" selection-start-column="121" selection-end-line="142" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machinebase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        <state relative-caret-position="396">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7132">
-          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+        <state relative-caret-position="8496">
+          <caret line="528" column="11" selection-start-line="528" selection-start-column="11" selection-end-line="528" selection-end-column="11" />
           <folding>
             <element signature="n#!!block;n#PollContext#0" />
             <element signature="n#!!block;n#PollController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machinebase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="342" column="31" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1341,7 +866,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 3.6 (PeptideKerberusBucket) interpreter library</last-edited>
+          <last-edited>Python 3.6 (kerberus) interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1353,11 +878,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Python 3.6 (PeptideKerberusBucket)</last-edited>
+          <last-edited>Python 3.6 (kerberus)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32089552" />
+                <option value="0.2786624" />
               </list>
             </option>
           </splitter-proportions>
@@ -1365,7 +890,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>PeptideKerberusBucket</last-edited>
+          <last-edited>PeptideKerberus</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

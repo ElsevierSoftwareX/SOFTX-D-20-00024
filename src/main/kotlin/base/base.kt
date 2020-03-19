@@ -4,6 +4,7 @@ import java.util.HashSet
 import java.io.BufferedReader
 import java.io.FileReader
 import java.util.ArrayList
+import java.util.Scanner
 import java.io.File
 import java.lang.management.ManagementFactory
 import org.apache.commons.math3.stat.inference.TestUtils
@@ -325,9 +326,12 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
 
 fun runMachineBase(args: List<String>, algorithms: String) {
     println("Passing control to python")
-    val carrier = "cmd /c python C:\\Users\\David\\IdeaProjects\\PeptideKerberusBucket\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
+    val carrier = "cmd /c python C:\\Users\\David\\Coding\\IdeaProjects\\kerberus\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
     println(carrier)
-    Runtime.getRuntime().exec(carrier)
+    val call_process = Runtime.getRuntime().exec(carrier)
+    Scanner(call_process.inputStream).use {
+        while (it.hasNextLine()) println(it.nextLine())
+    }
 }
 
 fun main(args: Array<Any>){

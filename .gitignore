@@ -1,0 +1,7 @@
+.gradle
+.idea
+.vscode
+src/interface/*
+src/main/.idea/*
+inputs
+out

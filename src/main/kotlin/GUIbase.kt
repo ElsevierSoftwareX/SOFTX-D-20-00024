@@ -146,11 +146,11 @@ class MyView : View() {
                         fontSize = 24.px
                     }
                 }
-                imageview(Image("icon2.png")) {
-                    Pos.TOP_CENTER
-                    fitWidth = 50.0
-                    fitHeight = 50.0
-                }
+                // imageview(Image("icon2.png")) {
+                //    Pos.TOP_CENTER
+                //    fitWidth = 50.0
+                //    fitHeight = 50.0
+                //}
             }
         }
 
@@ -526,7 +526,7 @@ class Main : App() {
             }
         }
         super.start(stage)
-        addStageIcon(Image("icon2.png"))
+        // addStageIcon(Image("icon2.png"))
         stage.width = 1220.0
         stage.height = 600.0
         stage.maxHeight = 600.0
