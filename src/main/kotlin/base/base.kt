@@ -326,12 +326,17 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
 
 fun runMachineBase(args: List<String>, algorithms: String) {
     println("Passing control to python")
-    val carrier = "cmd /c python C:\\Users\\David\\Coding\\IdeaProjects\\kerberus\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
+    val carrier = "cmd /c start python C:\\Users\\David\\Coding\\IdeaProjects\\kerberus\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
     println(carrier)
-    val call_process = Runtime.getRuntime().exec(carrier)
-    Scanner(call_process.inputStream).use {
-        while (it.hasNextLine()) println(it.nextLine())
-    }
+    ProcessBuilder("cmd", "/C", carrier)
+            .redirectOutput(ProcessBuilder.Redirect.INHERIT)
+            .start()
+            .waitFor()
+//    val call_process = Runtime.getRuntime().exec(carrier)
+//    val callprocess2 = Runtime.getRuntime().exec(carrier)
+//    Scanner(callprocess2.inputStream).use {
+//       while (it.hasNextLine()) println(it.nextLine())
+//    }
 }
 
 fun main(args: Array<Any>){

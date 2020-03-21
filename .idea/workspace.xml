@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d68495-1d58-4635-afb7-94c66524204b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PeptideKerberus_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machinebase.py" beforeDir="false" afterPath="$PROJECT_DIR$/machinebase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/BaseKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/PeptideKerberus_main.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Protein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/TTestProtein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/TTestResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/UniqueProtein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/permutationmaker/PermuteKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/permutationmaker/PermuteKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt$p2Tail$f$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt$p2Tail$f$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ttest/WelchttestKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface/Decision.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Decision.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface/K.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/K.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface/Random.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/Random.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface/proteinIDs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface/proteinIDs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/base/base.kt" afterDir="false" />
@@ -125,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="29">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
@@ -134,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machinebase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="484">
               <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
             </state>
           </provider>
@@ -143,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8496">
-              <caret line="528" column="11" selection-start-line="528" selection-start-column="11" selection-end-line="528" selection-end-column="11" />
+            <state relative-caret-position="8568">
+              <caret line="532" column="28" selection-start-line="532" selection-start-column="28" selection-end-line="532" selection-end-column="28" />
               <folding>
                 <element signature="n#!!block;n#PollContext#0" />
                 <element signature="n#!!block;n#PollController#0" />
@@ -156,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="342" column="31" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
+            <state relative-caret-position="293">
+              <caret line="339" column="1" lean-forward="true" selection-start-line="339" selection-start-column="1" selection-end-line="339" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -177,7 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MyFiles(</find>
       <find>textfield</find>
       <find>currentData</find>
       <find>Tree</find>
@@ -207,6 +180,7 @@
       <find>randomcontroller</find>
       <find>Lookfor</find>
       <find>KNeighborsClassifier</find>
+      <find>carrier</find>
     </findStrings>
     <replaceStrings>
       <replace>rforestarray</replace>
@@ -252,9 +226,9 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/Test.kt" />
         <option value="$PROJECT_DIR$/src/interface/Update.txt" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/machinebase.py" />
         <option value="$PROJECT_DIR$/src/main/kotlin/GUIbase.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/base/base.kt" />
-        <option value="$PROJECT_DIR$/machinebase.py" />
       </list>
     </option>
   </component>
@@ -275,11 +249,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1137" />
-    <option name="y" value="-14" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1713" />
+    <option name="y" value="18" />
     <option name="width" value="1734" />
-    <option name="height" value="1035" />
+    <option name="height" value="1389" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -287,7 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,10 +268,22 @@
               <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerberus" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerberus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PeptideKerberus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerberus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -552,12 +537,14 @@
       <workItem from="1582193625407" duration="1419000" />
       <workItem from="1582326455771" duration="1444000" />
       <workItem from="1582328289694" duration="463000" />
-      <workItem from="1584609463219" duration="4952000" />
+      <workItem from="1584609463219" duration="5225000" />
+      <workItem from="1584658177133" duration="10054000" />
+      <workItem from="1584774970355" duration="5635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287668000" />
+    <option name="totallyTimeSpent" value="303630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,7 +556,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <frame x="1713" y="18" width="1734" height="1389" extended-state="0" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5150812" side_tool="true" weight="0.25020242" />
       <window_info id="Designer" order="1" />
@@ -577,19 +564,19 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.08775029" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4849188" visible="true" weight="0.1260454" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.08007117" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48987854" visible="true" weight="0.37490258" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48926175" weight="0.580414" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28291816" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959514" weight="0.20818505" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959514" weight="0.20679887" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49959514" weight="0.4895178" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23131673" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51012146" side_tool="true" weight="0.17615658" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23087819" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51073825" side_tool="true" weight="0.57223797" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.7366548" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49635628" weight="0.24021353" />
@@ -758,16 +745,6 @@
     <entry file="file://$PROJECT_DIR$/src/pykotinterface/test" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/File.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/FileInputStream.java" />
-    <entry file="file://$PROJECT_DIR$/src/interface/K.txt" />
-    <entry file="file://$PROJECT_DIR$/src/interface/Random.txt" />
-    <entry file="file://$PROJECT_DIR$/src/interface/Decision.txt" />
-    <entry file="file://$PROJECT_DIR$/src/interface/Extra.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -802,20 +779,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/proteinIDs.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Decision.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/interface/Lookfor.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Update.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/K.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface/Random.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machinebase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="29">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/GUIbase.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8496">
-          <caret line="528" column="11" selection-start-line="528" selection-start-column="11" selection-end-line="528" selection-end-column="11" />
+        <state relative-caret-position="8568">
+          <caret line="532" column="28" selection-start-line="532" selection-start-column="28" selection-end-line="532" selection-end-column="28" />
           <folding>
             <element signature="n#!!block;n#PollContext#0" />
             <element signature="n#!!block;n#PollController#0" />
@@ -823,17 +826,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machinebase.py">
+    <entry file="file://$PROJECT_DIR$/src/interface/Extra.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/base/base.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="342" column="31" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
+        <state relative-caret-position="293">
+          <caret line="339" column="1" lean-forward="true" selection-start-line="339" selection-start-column="1" selection-end-line="339" selection-end-column="1" />
         </state>
       </provider>
     </entry>

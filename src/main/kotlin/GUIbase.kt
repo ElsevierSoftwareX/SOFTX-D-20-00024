@@ -527,9 +527,10 @@ class Main : App() {
         }
         super.start(stage)
         // addStageIcon(Image("icon2.png"))
-        stage.width = 1220.0
-        stage.height = 600.0
-        stage.maxHeight = 600.0
+        stage.width = 1250.0
+        stage.height = 650.0
+        stage.maxHeight = 650.0
+        stage.maxWidth = 1250.0
         stage.isResizable = true
         stage.centerOnScreen()
     }
