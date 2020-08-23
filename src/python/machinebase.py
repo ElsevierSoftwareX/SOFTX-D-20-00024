@@ -52,12 +52,12 @@ def individualForests(kerberusln, kerberussp, testdata, type, time, look, output
 
     if type == "Isolation":
         forest = IsolationForest(max_samples='auto', contamination=0.2)
-        os.makedirs(outputfolder + 'Individual/IsolationForest/')
+        os.makedirs(outputfolder + 'Individual/IsolationForest/', exist_ok=True)
         foldername = outputfolder + 'Individual/IsolationForest/'
 
     if type == "RandomClassifier":
         forest = RandomForestClassifier(n_estimators=100)
-        os.makedirs(outputfolder + 'Individual/RandomClassifierForest/')
+        os.makedirs(outputfolder + 'Individual/RandomClassifierForest/', exist_ok=True)
         foldername = outputfolder + 'Individual/RandomClassifierForest/'
 
     # This section here will produce 400 separate forests, 1 for every ttest combo,
@@ -116,7 +116,7 @@ def individualForests(kerberusln, kerberussp, testdata, type, time, look, output
         plt.yticks(np.arange(0, 1, step=0.05))
         plt.xticks(np.arange(0, 1, step=0.05), rotation=75)
         plt.tight_layout()
-        plt.savefig(foldername + index + '.jpg')
+        plt.savefig(foldername + index + '.png')
         plt.close("all")
 
 
@@ -179,7 +179,7 @@ def megaIsolationForest(totaldf, testdf):
 
 def multiLabelMultiClassifier(kerberusln, kerberussp, testdata, labels, usertypes, outputfolder):
 
-    os.mkdir(outputfolder + "/MultiLabel/")
+    os.makedirs(outputfolder + "MultiLabel/", exist_ok=True)
 
     forestcollection = []
     possibletypes = ["KNeighbors", "Random Forest", "Decision Tree", "Extra Trees"]
@@ -312,7 +312,7 @@ if __name__ == '__main__':
     if sum(testtypes[0:4]) > 0:
         multiLabelMultiClassifier(Kerberusdataln, Kerberusdatasp, Testdata, Labels, testtypes[0:4], outputresults)
     if sum(testtypes[4:6]) > 0:
-        os.makedirs(outputresults + 'Individual/')
+        os.makedirs(outputresults + 'Individual/', exist_ok=True)
     if testtypes[4] == 1:
         individualForests(Kerberusdataln, Kerberusdatasp, Testdata, "RandomClassifier", time, lookoutIDs, outputresults)
     if testtypes[5] == 1:
