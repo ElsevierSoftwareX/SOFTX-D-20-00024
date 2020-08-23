@@ -10,6 +10,7 @@ import org.apache.commons.math3.stat.inference.TestUtils
 import java.util.stream.IntStream
 import kotlin.math.ln
 import org.apache.commons.collections4.ListUtils
+import org.apache.commons.io.IOUtils
 
 fun starttimer(): Long {
     val threadMX = ManagementFactory.getThreadMXBean()
@@ -324,10 +325,23 @@ fun makeOutput(ttdata: ArrayList<ArrayList<TTestResult>>, perms: ArrayList<List<
 }
 
 fun runMachineBase(args: List<String>, algorithms: String) {
+    val projectpath = System.getProperty("user.dir")
+
+    val projectpythoncall = Runtime.getRuntime().exec("cmd /c cd $projectpath & poetry env info -p")
+    projectpythoncall.waitFor()
+    val projectpython = IOUtils.toString(projectpythoncall.inputStream, Charsets.UTF_8).trim()
+
+    val carrier = "cd $projectpath & $projectpython\\Scripts\\python.exe $projectpath\\src\\python\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
     println("Passing control to python")
-    val carrier = "cmd /c python C:\\Users\\David\\IdeaProjects\\PeptideKerberusBucket\\machinebase.py " + (args + algorithms).toString().replace("[", "").replace("]", "")
     println(carrier)
-    Runtime.getRuntime().exec(carrier)
+
+    val pythonpass = Runtime.getRuntime().exec("cmd /C $carrier")
+    pythonpass.waitFor()
+
+    //ProcessBuilder("cmd", "/C", "start", carrier)
+    //       .redirectOutput(ProcessBuilder.Redirect.INHERIT)
+    //        .start()
+    //        .waitFor()
 }
 
 fun main(args: Array<Any>){

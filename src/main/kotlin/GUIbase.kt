@@ -141,16 +141,16 @@ class MyView : View() {
         top = hbox(0, Pos.BOTTOM_CENTER) {
             label("")
             hbox(20, Pos.CENTER) {
-                label("PeptideKerberus") {
+                label("PeptideMind") {
                     style {
                         fontSize = 24.px
                     }
                 }
-                imageview(Image("icon2.png")) {
-                    Pos.TOP_CENTER
-                    fitWidth = 50.0
-                    fitHeight = 50.0
-                }
+                //imageview(Image("icon2.png")) {
+                //    Pos.TOP_CENTER
+                //    fitWidth = 50.0
+                //    fitHeight = 50.0
+                //}
             }
         }
 
@@ -443,7 +443,7 @@ class MyView : View() {
                     paddingAll = 20
                 }
 
-                setMaxSize(250.00, 1000.00)
+                setMaxSize(275.00, 1000.00)
                 label("Controls") {
                     Pos.CENTER
                     style {
@@ -469,7 +469,11 @@ class MyView : View() {
                                     output.setFilePathName("No Folder Selected!")
                                 }
                             }
-                            label("Select Output Folder", center)
+                            label("Select Output Folder", center) {
+                                style {
+                                    fontSize = 16.px
+                                }
+                            }
                         }
                         textfield().bind(output.filePathProperty())
                     }
@@ -526,11 +530,10 @@ class Main : App() {
             }
         }
         super.start(stage)
-        addStageIcon(Image("icon2.png"))
-        stage.width = 1220.0
-        stage.height = 600.0
-        stage.maxHeight = 600.0
-        stage.isResizable = true
+        //addStageIcon(Image("icon2.png"))
+        stage.width = 1350.0
+        stage.height = 610.0
+        stage.isResizable = false
         stage.centerOnScreen()
     }
 }
