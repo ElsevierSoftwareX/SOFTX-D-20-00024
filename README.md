@@ -77,13 +77,15 @@ Ok, hold onto your socks because installing PeptideMind will take a little bit o
 
 8.	Time to set up the Python environment for PeptideMind.
 
-    a.	With command prompt, type the following command: `pip install poetry`
+    a.  Navigate into your PeptideMind folder: `cd C:\Users\Your_UserName\code\peptidemind`
 
-    b.	Navigate into your PeptideMind folder: `cd C:\Users\Your_UserName\code\peptidemind`
+    b.  Switch over to the GUI branch: `git checkout 2020-GUI`
 
-    c.	Next, type in `poetry install`
+    c.	With command prompt, type the following command: `pip install poetry`
 
-    d.  The system will spend the next 5 minutes installing the python environment for you. It's a little slow, sorry.
+    d.	Next, type in `poetry install`
+
+    e.  The system will spend the next 5 minutes installing the python environment for you. It's a little slow, sorry.
 
 9.	Time to set up the Gradle environment for PeptideMind:
 
