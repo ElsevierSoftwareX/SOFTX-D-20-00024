@@ -16,10 +16,10 @@ import java.io.File
 import base.*
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.beans.property.SimpleObjectProperty
-import javafx.beans.value.ObservableBooleanValue
-import javafx.beans.value.ObservableStringValue
-import javafx.beans.value.ObservableValue
-import javafx.scene.image.Image
+//import javafx.beans.value.ObservableBooleanValue
+//import javafx.beans.value.ObservableStringValue
+//import javafx.beans.value.ObservableValue
+//import javafx.scene.image.Image
 import kotlin.concurrent.thread
 
 data class DataResult(val data : SimpleDoubleProperty)
@@ -492,7 +492,7 @@ class MyView : View() {
                                 selectoutput
                                 )
                         actions.forEach {println(it)}
-                        thread { base.main(actions) } // Wow that's so simple! This is how you run a function in parallel so that the GUI doesn't lock
+                        thread { main(actions) } // Wow that's so simple! This is how you run a function in parallel so that the GUI doesn't lock
                         startbuttondisable.value = true
                     }
                 }
@@ -536,4 +536,8 @@ class Main : App() {
         stage.isResizable = false
         stage.centerOnScreen()
     }
+}
+
+fun main(args: Array<String>) {
+    launch<Main>(args)
 }

@@ -1,45 +1,97 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Let's install PeptideMind on your system!
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+Ok, hold onto your socks because installing PeptideMind will take a little bit of patience (~30 mins). Follow these steps and you should be fine:
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+### What you’ll be downling (and why):
+	Git
+		To grab a copy of the PeptideMind source code
+	Java JDK 8
+		Most of PeptideMind runs on Java – so we’ll need an appropriate java platform
+    Gradle 6
+	    Gradle helps create an environment on your computer that can run PeptideMind 
+    Python 3.6
+	    The brains of PeptideMind – handles all ML code
+	Kotlin 1.3.21
+		The beauty of PeptideMind – handles GUI code and some data-wrangling
 
----
+### Instructions
+1.	First, we’re going to install Java.
 
-## Edit a file
+    a. [Click this link](https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jdk_x64_windows_hotspot_8u265b01.msi) and follow the installation instructions.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+    b. Restart your system
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+2.	Next, we need python 3.6.
 
----
+    a. [Click this link](https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe) and follow the instructions.
 
-## Create a file
+    b. Make sure that you select the Add to Path option on the first page.
 
-Next, you’ll add a new file to this repository.
+    c. Restart your system
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+3.	Download GIT.
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+    a. [Click this link](https://github.com/git-for-windows/git/releases/download/v2.28.0.windows.1/Git-2.28.0-64-bit.exe) and follow the instructions.
 
----
+    b. Git has many bells/whistles and options to select. Choose what is appropriate for your system; most, if not all, configurations will work.
 
-## Clone a repository
+    c. Restart your system
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+4.	Gradle.
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+    a. [This one is more involved and you'll need to follow a tutorial](https://docs.gradle.org/current/userguide/installation.html)
+    
+5.	Kotlin. Easy one:
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+    a. [Click this link](https://github.com/JetBrains/kotlin/releases/download/v1.3.21/kotlin-native-windows-1.3.21.zip) and follow the instructions.
+
+    b. Restart your system
+
+6.	Check everything is working!
+
+    a.	Open up your command prompt and type in the following commands separately followed by enter:
+
+    `python`
+
+    `javac -version`
+
+    `java -version`
+
+    `gradle`
+
+    `kotlinc`
+
+    `git`
+
+    b.	If the packages were installed correctly, you should see each program execute. If anything fails to load, you'll have to troubleshoot why it's not loading correctly. In most cases, the system is probably missing what's called an environment variable (when you type in `javac`, for instance, the computer needs to be told what that means. Installing development tools will often handle this for you but sometimes (Python, I'm looking at you) it wont.)
+
+7.	Time to get PeptideMind’s code!
+
+    a.	Make a folder on your computer where you want to place the code. I recommend `C:\Users\Your_UserName\code\`
+
+    b.	Open up command prompt and type: `cd C:\Users\Your_UserName\code\`
+
+    c.	Next: `git clone https://bitbucket.org/peptidewitch/peptidemind.git`
+
+    d.	This will create a new folder called peptidemind and download all of PeptideMind into the code folder. All of the source code for the project should now be in there.
+
+8.	Time to set up the Python environment for PeptideMind.
+
+    a.	With command prompt, type the following command: `pip install poetry`
+
+    b.	Navigate into your PeptideMind folder: `cd C:\Users\Your_UserName\code\peptidemind`
+
+    c.	Next, type in `poetry install`
+
+    d.  The system will spend the next 5 minutes installing the python environment for you. It's a little slow, sorry.
+
+9.	Time to set up the Gradle environment for PeptideMind:
+
+    a.	With command prompt, type the following command from the peptidemind folder: `gradle build`
+
+10.	Last step!
+
+    a.	To launch PeptideMind, run the following command from the peptidemind folder: `gradle run.`
+
+
+It’s thaaaaaat easy. I’m sorry for wasting an hour of your life. Whenever you want to work with peptide mind, you can use that `gradle run` command to open it up. Alternatively, there's a standalone file in the folder `peptidemind/out/artefacts/kerberus_jar.jar`. It may not work. Spicy tip for the future - don't ever use Java for a PhD project. Don't build a GUI either. Put it all online like a sensible person.
